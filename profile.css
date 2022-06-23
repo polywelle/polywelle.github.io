@@ -33,6 +33,18 @@ list-style: none;
 margin-bottom: 60px;
 }
 
+h3 {
+font-size: 16px;
+}
+
+.report {
+color:rgb(42, 20, 240)
+}
+
+.timeline-date {
+text-decoration: underline;
+}
+
 /* デスクトップ用 */
 @media (min-width : 640px){
 
@@ -69,7 +81,22 @@ left: 104px;
 top: 54px;
 border-radius: 100%;
 }
+
+h3 {
+font-size: 20px;
 }
+
+.report {
+color: black;
+}
+
+.report:hover {
+    color: rgb(122, 6, 6);      /* マウスオーバー時の文字色 */
+}
+
+}                           /* デスクトップ用ここまで */
+
+
 
 p {
     margin:0;
@@ -85,9 +112,6 @@ a {
     /* transition: color 0.5s; */     /* マウスオーバー時に文字色が変わる時間設定 */
 }
 
-a:hover{
-    color: rgb(122, 6, 6);      /* マウスオーバー時の文字色 */
-}
 
 .last-margin {
     padding-bottom: 60px;
