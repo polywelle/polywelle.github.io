@@ -1,0 +1,94 @@
+@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
+
+body{                                   /* 全体の背景色 */
+    background-color: #a09c9c;
+}
+
+.wrap {
+width: 100vw;
+height: 100px;
+margin: 0 auto;  /* 上の余白０ */ 
+position: relative; /* 親要素の位置を固定 */
+}
+
+
+.title{
+font-size: 40px;
+font-family: 'Mv Boli',cursive;
+color: #070707;
+position:absolute;    /* 親要素の位置から相対的に移動 */
+top:20%;
+left:50%;
+transform: translate(-50%,-50%);   /* 子要素のどの部分を真ん中にするか */
+}
+
+/* 携帯用 */
+.timeline{
+list-style: none;
+}
+.timeline > li {
+margin-bottom: 60px;
+}
+
+/* デスクトップ用 */
+@media (min-width : 640px){
+
+.timeline > li  {  
+ overflow: hidden;         /* フロートをリセット　ないと次の文章がずれる */
+ margin: 0;
+ position: relative;
+}
+
+.timeline-date {
+ width: 110px;
+ float: left;
+ margin-top: 16px;
+ padding-top: 30px;
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.timeline-content {
+ width: 75%;
+ float: left;
+ border-left: 3px #e5e5d1 solid;    /* 縦線の色 */
+ padding-left: 30px;
+ padding-top: 30px;
+}
+
+.timeline-content:before {     /* 丸印 */
+content: '';
+width: 15px;
+height: 15px;
+background: #ee0a8f;
+position: absolute;
+left: 104px;
+top: 54px;
+border-radius: 100%;
+}
+}
+
+p {
+    margin:0;
+}
+
+.margin {
+    padding-top: 30px;
+}
+
+a {
+    color: #080808;
+    text-decoration: none;      /* リンクのアンダーバー消す */
+    /* transition: color 0.5s; */     /* マウスオーバー時に文字色が変わる時間設定 */
+}
+
+a:hover{
+    color: rgb(122, 6, 6);      /* マウスオーバー時の文字色 */
+}
+
+.last-margin {
+    padding-bottom: 60px;
+}
