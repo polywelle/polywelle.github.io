@@ -1,0 +1,749 @@
+@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
+
+    @media (max-width : 799px){
+
+    /* メニューバー */
+    ul.ddmenu {
+    display: none;
+    }
+
+    #humMenu {
+        padding: 12px;
+        position: fixed;
+        z-index: 20;
+    }
+
+    #humCheck, #humClose {display: none;}
+    #humOpen {
+        display: block;             /* ブロック要素にする */
+        width: 58px;
+        cursor: pointer;            /* マウスの矢印が変化する */
+    }
+
+    #humOpen:hover {
+        opacity: 0.5;           /* 透明度 */
+    }
+
+    #humOpen img {display: block;}
+    #humClose, nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    #humClose {             /* クリック後の背景画面 */
+        z-index: 2;
+        width: 100%;
+        background: rgb(148, 146, 146);
+        opacity: 0.8;
+        transition: 0.5s;           /* アニメーションタイム */
+    }
+
+    nav{                /* クリック後のメイン画面 */
+        z-index: 3;
+        width: 330px;
+        background: rgb(218, 218, 218);
+        transition: 0.5s;
+        transform: translateX(-100%);
+    }
+
+    #humCheck:checked ~ #humClose {display: block;}         /* もう一度押すとメニューが閉じる */
+    #humCheck:checked ~ nav {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        overflow: hidden;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    nav li {
+        padding: 15px 0;
+        margin: 10px 0;
+    }
+
+    nav li a:hover {
+        opacity: 0.5;
+    }
+
+    nav li a {
+        font-size: 20px;
+        text-decoration: none;
+        color:black;
+    }
+
+
+    .flowbtn10{
+        font-size:35px;
+        text-decoration:none;
+        transition:.5s;
+        color:#444;	
+        }
+
+   
+
+
+    /* 全体の背景色 */
+    body{                                   
+        background-color: #a09c9c;
+    }
+    
+
+   /*  タイトル */
+    .images {
+    text-align: center;
+    position: relative;   /* 親要素の位置を固定 */
+    }
+
+    .images img {
+    width:100%;       /* 1000前後がおすすめ */
+    height:800px;
+    margin: 0px;
+    }
+    
+    .title{
+    font-size: 100px;
+    font-family: 'Mv Boli',cursive;
+    color: #eb2929;
+    text-shadow: 5px 5px 10px pink;     /* 右下ぼかし値 */
+    position:absolute;    /* 親要素の位置から相対的に移動 */
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);   /* 子要素のどの部分を真ん中にするか */
+    }
+   
+    .subtitle{
+    font-size: 26px;
+    font-family: 'arial',sans-serif;
+    color: #f1f0f0;
+    white-space: nowrap;   /* 改行しないようにする */
+    position:absolute;    
+    top:60%;
+    left:50%;
+    transform: translate(-50%,-50%);   
+    }    
+    
+
+    .wrap2 {
+        position: relative;       /* imgではposition効かないため */
+        margin:0;
+        padding-bottom: 550px;
+        }
+    
+        .wrap2 img {
+        width: 250px;
+        margin: 0px;
+        float: left;        /* 要素を右に回り込ませる */
+        position: relative;     /* positionがないとzindex効かない */
+        z-index: 10;
+        margin-left: 2%;
+        margin-top: 160px;
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
+        }
+    
+        .box1 {
+        padding-bottom: 40px;
+        padding-top: 40px;
+        width: 70%;
+        background-color: rgba(244, 248, 15, 0.5); 
+        position:absolute;    
+        top:200px;
+        left:200px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 10px gray;
+        }
+    
+        .wrap2 p {
+        font-size: 16px;
+        font-family: 'arial',sans-serif;
+        margin: 0px;
+        padding-left: 20%;
+        padding-right: 5%;
+        }
+    
+        .maintext{          /* 植木鉢カバー */
+        font-size: 20px;
+        font-family: 'arial',sans-serif;
+        margin-left: 20%;
+        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        font-weight: bold;
+        }
+    
+        .text {             /* 購入した〜 */
+        padding-top: 2%;
+        }
+    
+        ul.benefict li {        /* 箇条書き */
+        font-size: 16px;
+        font-family: 'arial',sans-serif;
+        list-style-type: none;
+        padding-top: 0px;
+        margin: 0px;
+        padding-left: 14%;
+        }
+    
+        /* ボタン */
+        .button1 {      
+        margin: -60px 105% 0 -35%;      /* 上右下左の値 */
+        border: solid 2px #050505;
+        border-radius: 5px;             /* 角の丸み */
+        background-color: #cfcccc;
+        }
+    
+        .button1 p {
+        font-size: 16px;
+        text-align: center;  
+        margin: 0;
+        padding: 5px 0;         /* 上下　左右の値 */
+        }
+        
+        .button1:hover {
+        background-color: #0c0c0c;
+        color:#fcfafa;
+        }
+
+
+        /* 試験管花瓶 */
+    .wrap3 {
+        position: relative;       
+        margin:0;
+        padding-bottom: 550px;
+        }
+    
+        .wrap3 img {
+        width: 250px;
+        margin: 0px;
+        float: right;        
+        position: relative;     
+        z-index: 1000;
+        margin-right: 3%;
+        margin-top: 30px;
+        box-shadow: 5px 5px 10px gray;
+        }
+    
+        .box2 {
+        padding-bottom: 40px;
+        padding-top: 40px;
+        width: 70%;
+        background-color: rgba(233, 136, 185, 0.5); 
+        position:absolute;    
+        top:70px;
+        left:20px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 10px gray;
+        }
+
+    
+        .wrap3 p {
+        font-size: 16px;
+        font-family: 'arial',sans-serif;
+        margin: 0px;
+        padding-left: 20%;
+        padding-right: 5%;
+        margin-right: 150px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
+        }
+    
+        .maintext2{          
+        font-size: 20px;
+        font-family: 'arial',sans-serif;
+        margin-left: 20%;
+        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        font-weight: bold;
+        }
+    
+        .text2 {             /* 購入した〜 */
+        padding-top: 2%;
+        }
+    
+        ul.benefict2 li {        /* 箇条書き */
+        font-size: 16px;
+        font-family: 'arial',sans-serif;
+        list-style-type: none;
+        padding-top: 0px;
+        margin: 0px;
+        padding-left: 13%;
+        padding-right: 5%;
+        margin-right: 150px;
+        }
+    
+        /* ボタン */
+        .button2 {      
+        margin: -50px -34% 0 105%;      /* 上右下左の値 */
+        border: solid 2px #050505;
+        border-radius: 5px;             /* 角の丸み */
+        background-color: #cfcccc;
+        }
+    
+        .button2 p {
+        font-size: 16px;
+        text-align: center;  
+        margin: 0;
+        padding: 5px 0;         /* 上下　左右の値 */
+        }
+        
+        .button2:hover {
+        background-color: #0c0c0c;
+        color:#fcfafa;
+        }
+}
+
+
+
+@media (min-width : 800px){         /* 携帯750px */
+
+    /* メニューバー */
+    .ddmenu {
+    text-align: center;    
+    }
+
+    #humMenu {
+    display: none;
+    }
+
+    ul.ddmenu {
+        margin: 0px;
+        padding-top: 5px;
+        margin-left: 10%;
+        /* width: 1000px;
+        display: flex; */    /* 横並びに配置 */
+    }
+    
+    ul.ddmenu li {
+        list-style: none;       /* liタグの箇条書きの点を消す */
+        display: inline-block;   /* 横並びに配置 */
+        width: 24%;
+        position:relative;
+    }
+    ul.ddmenu a {
+        text-decoration: none;  /* リンクの下線を消す */
+        color: white;
+        font-weight: bold;
+        font-family: 'arial',sans-serif;
+        display: block;         /* 項目内全域をリンク可能 */
+        line-height: 40px;
+        padding-right: 200px;
+    }
+    ul.ddmenu a:hover{
+        color: rgb(12, 12, 12);      /* マウスオーバー時の文字色 */
+    }
+
+    /* 通常時のサブメニュー */
+    ul.ddmenu ul{
+        display: none;      /* 標準では非表示 */
+        margin-top: 0px;        /* 外側の余白0 */
+        padding: 0px;       /* 内側の余白0 */
+        position: absolute;
+        z-index: 1000;      /* 最前面に設定 */
+    }
+    ul.ddmenu li:hover ul{
+        display: block;     /* マウスが載っている間項目を表示 */
+        background-color: rgba(12, 12, 12, 0.3);        /* 最後の数字は透過度 */
+    }
+    
+    /* サブメニューの装飾 */
+    ul.ddmenu ul li {
+        width: 80%;
+        /* border-top: 1px solid rgb(156, 154, 154);  */      /* 横線 */
+    }
+    ul.ddmenu ul li a {
+        line-height: 35px;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-weight: normal;
+    }
+    ul.ddmenu ul li a:hover {
+        color: #a19f9f;
+    }
+
+
+    body{                                   /* 全体の背景色 */
+        background-color: #a09c9c;
+    }
+    
+
+   /*  タイトル */
+    .images {
+    text-align: center;
+    position: relative;   /* 親要素の位置を固定 */
+    }
+
+    .images img {
+    width:1000px;       /* 1000前後がおすすめ */
+    height:800px;
+    margin: 0px;
+    }
+    
+    .title{
+    font-size: 120px;
+    font-family: 'Mv Boli',cursive;
+    color: #eb2929;
+    text-shadow: 5px 5px 10px pink;     /* 右下ぼかし値 */
+    position:absolute;    /* 親要素の位置から相対的に移動 */
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);   /* 子要素のどの部分を真ん中にするか */
+    }
+   
+    .subtitle{
+    font-size: 30px;
+    font-family: 'arial',sans-serif;
+    color: #f1f0f0;
+    white-space: nowrap;   /* 改行しないようにする */
+    position:absolute;    
+    top:60%;
+    left:50%;
+    transform: translate(-50%,-50%);   
+    }    
+
+
+    /* 植木鉢カバー */
+    .wrap2 {
+    position: relative;       /* imgではposition効かないため */
+    margin:0;
+    padding-bottom: 550px;
+    }
+
+    .wrap2 img {
+    min-width: 400px;
+    width: 35%;
+    margin: 0px;
+    float: left;        /* 要素を右に回り込ませる */
+    position: relative;     /* positionがないとzindex効かない */
+    z-index: 1000;
+    margin-left: 10%;
+    margin-top: 160px;
+    box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
+    }
+
+    .box1 {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    width: 70%;
+    background-color: rgba(244, 248, 15, 0.5); 
+    position:absolute;    
+    top:200px;
+    left:300px;
+    margin-bottom: 100px;
+    box-shadow: 5px 5px 10px gray;
+    }
+
+    .wrap2 p {
+    font-size: 18px;
+    font-family: 'arial',sans-serif;
+    margin: 0px;
+    padding-left: 40%;
+    padding-right: 5%;
+    }
+
+    .maintext{          /* 植木鉢カバー */
+    font-size: 24px;
+    font-family: 'arial',sans-serif;
+    margin-left: 40%;
+    border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+    padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+    font-weight: bold;
+    }
+
+    .text {             /* 購入した〜 */
+    padding-top: 2%;
+    }
+
+    ul.benefict li {        /* 箇条書き */
+    font-size: 18px;
+    font-family: 'arial',sans-serif;
+    list-style-type: none;
+    padding-top: 0px;
+    margin: 0px;
+    padding-left: 40%;
+    }
+
+    /* ボタン */
+    .button1 {      
+    margin: 30px 10% 0 70%;      /* 上右下左の値 */
+    border: solid 2px #050505;
+    border-radius: 5px;             /* 角の丸み */
+    background-color: #cfcccc;
+    }
+
+    .button1 p {
+    font-size: 18px;
+    text-align: center;  
+    margin: 0;
+    padding: 10px 0;         /* 上下　左右の値 */
+    }
+    
+    .button1:hover {
+    background-color: #0c0c0c;
+    color:#fcfafa;
+    }
+
+
+    /* 試験管花瓶 */
+    .wrap3 {
+        position: relative;       
+        margin:0;
+        padding-bottom: 550px;
+        }
+    
+        .wrap3 img {
+        min-width: 400px;
+        width: 35%;
+        margin: 0px;
+        float: right;        
+        position: relative;     
+        z-index: 1000;
+        margin-right: 9%;
+        margin-top: 160px;
+        box-shadow: 5px 5px 10px gray;
+        }
+    
+        .box2 {
+        padding-bottom: 20px;
+        padding-top: 40px;
+        width: 70%;
+        background-color: rgba(233, 136, 185, 0.5); 
+        position:absolute;    
+        top:190px;
+        left:150px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 10px gray;
+        }
+
+    
+        .wrap3 p {
+        font-size: 18px;
+        font-family: 'arial',sans-serif;
+        margin: 0px;
+        padding-left: 20%;
+        padding-right: 5%;
+        margin-right: 350px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
+        }
+    
+        .maintext2{          
+        font-size: 24px;
+        font-family: 'arial',sans-serif;
+        margin-left: 20%;
+        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        font-weight: bold;
+        }
+    
+        .text2 {             /* 購入した〜 */
+        padding-top: 2%;
+        }
+    
+        ul.benefict2 li {        /* 箇条書き */
+        font-size: 18px;
+        font-family: 'arial',sans-serif;
+        list-style-type: none;
+        padding-top: 0px;
+        margin: 0px;
+        padding-left: 17%;
+        padding-right: 5%;
+        }
+    
+        /* ボタン */
+        .button2 {      
+        margin: 30px 50% 0 30%;      /* 上右下左の値 */
+        border: solid 2px #050505;
+        border-radius: 5px;             /* 角の丸み */
+        background-color: #cfcccc;
+        }
+    
+        .button2 p {
+        font-size: 18px;
+        text-align: center;  
+        margin: 0;
+        padding: 10px 0;         /* 上下　左右の値 */
+        }
+        
+        .button2:hover {
+        background-color: #0c0c0c;
+        color:#fcfafa;
+        }
+
+
+    /* 生活品 */
+    .wrap4 {
+        position: relative;       /* imgではposition効かないため */
+        margin:0;
+        padding-bottom: 550px;
+    }
+    
+    .wrap4 img {
+        min-width: 400px;
+        width: 35%;
+        margin: 0px;
+        float: left;        /* 要素を右に回り込ませる */
+        position: relative;     /* positionがないとzindex効かない */
+        z-index: 1000;
+        margin-left: 10%;
+        margin-top: 160px;
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
+    }
+    
+    .box3 {
+        padding-bottom: 40px;
+        padding-top: 40px;
+        width: 70%;
+        background-color: rgba(244, 248, 15, 0.5); 
+        position:absolute;    
+        top:200px;
+        left:300px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 10px gray;
+    }
+    
+    .wrap4 p {
+        font-size: 18px;
+        font-family: 'arial',sans-serif;
+        margin: 0px;
+        padding-left: 40%;
+        padding-right: 5%;
+    }
+    
+    .maintext3 {          /* 植木鉢カバー */
+        font-size: 24px;
+        font-family: 'arial',sans-serif;
+        margin-left: 40%;
+        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        font-weight: bold;
+    }
+    
+    .text3 {             /* 購入した〜 */
+        padding-top: 2%;
+    }
+    
+    ul.benefict3 li {        /* 箇条書き */
+        font-size: 18px;
+        font-family: 'arial',sans-serif;
+        list-style-type: none;
+        padding-top: 0px;
+        margin: 0px;
+        padding-left: 40%;
+    }
+    
+    /* ボタン */
+    .button3 {      
+        margin: 30px 10% 0 70%;      /* 上右下左の値 */
+        border: solid 2px #050505;
+        border-radius: 5px;             /* 角の丸み */
+        background-color: #cfcccc;
+    }
+    
+    .button3 p {
+        font-size: 18px;
+        text-align: center;  
+        margin: 0;
+        padding: 10px 0;         /* 上下　左右の値 */
+    }
+        
+    .button3:hover {
+        background-color: #0c0c0c;
+        color:#fcfafa;
+    }
+
+
+
+     /* FullControl Gcode Designer */
+     .wrap5 {
+        position: relative;       
+        margin:0;
+        padding-bottom: 550px;
+        }
+    
+        .wrap5 img {
+        min-width: 400px;
+        width: 35%;
+        margin: 0px;
+        float: right;        
+        position: relative;     
+        z-index: 1000;
+        margin-right: 9%;
+        margin-top: 160px;
+        box-shadow: 5px 5px 10px gray;
+        }
+    
+        .box4 {
+        padding-bottom: 20px;
+        padding-top: 40px;
+        width: 70%;
+        background-color: rgba(233, 136, 185, 0.5); 
+        position:absolute;    
+        top:190px;
+        left:150px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 10px gray;
+        }
+
+    
+        .wrap5 p {
+        font-size: 18px;
+        font-family: 'arial',sans-serif;
+        margin: 0px;
+        padding-left: 20%;
+        padding-right: 5%;
+        margin-right: 350px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
+        }
+    
+        .maintext4 {          
+        font-size: 24px;
+        font-family: 'arial',sans-serif;
+        margin-left: 20%;
+        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        font-weight: bold;
+        }
+    
+        .text4 {             /* 購入した〜 */
+        padding-top: 2%;
+        }
+    
+        ul.benefict4 li {        /* 箇条書き */
+        font-size: 18px;
+        font-family: 'arial',sans-serif;
+        list-style-type: none;
+        padding-top: 0px;
+        margin: 0px;
+        padding-left: 17%;
+        padding-right: 5%;
+        }
+    
+        /* ボタン */
+        .button4 {      
+        margin: 30px 50% 0 30%;      /* 上右下左の値 */
+        border: solid 2px #050505;
+        border-radius: 5px;             /* 角の丸み */
+        background-color: #cfcccc;
+        }
+    
+        .button4 p {
+        font-size: 18px;
+        text-align: center;  
+        margin: 0;
+        padding: 10px 0;         /* 上下　左右の値 */
+        }
+        
+        .button4:hover {
+        background-color: #0c0c0c;
+        color:#fcfafa;
+        }
+
+}
+
+
+/* 下からフェードイン */
+.slide-bottom {
+	opacity: 0;                             /* アニメーションが実行される前の状態　要素の透明度が0 */
+	transform: translate(0, 20px);          /* 要素の上下左右の調整　左右が0下20pxから */
+	transition: all 2s 0s ease-out;        /* 全てを対象、変化の時間、待機時間、ゆっくり終わる */
+ }
