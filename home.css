@@ -292,6 +292,174 @@
         background-color: #0c0c0c;
         color:#fcfafa;
         }
+
+
+        /* 生活品 */
+        .wrap4 {
+            position: relative;       /* imgではposition効かないため */
+            margin:0;
+            padding-bottom: 550px;
+            }
+        
+            .wrap4 img {
+            width: 250px;
+            margin: 0px;
+            float: left;        /* 要素を右に回り込ませる */
+            position: relative;     /* positionがないとzindex効かない */
+            z-index: 10;
+            margin-left: 2%;
+            margin-top: 160px;
+            box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
+            }
+        
+            .box3 {
+            padding-bottom: 40px;
+            padding-top: 40px;
+            width: 70%;
+            background-color: rgba(244, 248, 15, 0.5); 
+            position:absolute;    
+            top:200px;
+            left:200px;
+            margin-bottom: 100px;
+            box-shadow: 5px 5px 10px gray;
+            }
+        
+            .wrap3 p {
+            font-size: 16px;
+            font-family: 'arial',sans-serif;
+            margin: 0px;
+            padding-left: 20%;
+            padding-right: 5%;
+            }
+        
+            .maintext3 {          /* 植木鉢カバー */
+            font-size: 20px;
+            font-family: 'arial',sans-serif;
+            margin-left: 20%;
+            border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+            padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+            font-weight: bold;
+            }
+        
+            .text3 {             /* 購入した〜 */
+            padding-top: 2%;
+            }
+        
+            ul.benefict3 li {        /* 箇条書き */
+            font-size: 16px;
+            font-family: 'arial',sans-serif;
+            list-style-type: none;
+            padding-top: 0px;
+            margin: 0px;
+            padding-left: 14%;
+            }
+        
+            /* ボタン */
+            .button3 {      
+            margin: -60px 105% 0 -35%;      /* 上右下左の値 */
+            border: solid 2px #050505;
+            border-radius: 5px;             /* 角の丸み */
+            background-color: #cfcccc;
+            }
+        
+            .button3 p {
+            font-size: 16px;
+            text-align: center;  
+            margin: 0;
+            padding: 5px 0;         /* 上下　左右の値 */
+            }
+            
+            .button3:hover {
+            background-color: #0c0c0c;
+            color:#fcfafa;
+            }
+    
+    
+            /* Fullcontrol */
+        .wrap3 {
+            position: relative;       
+            margin:0;
+            padding-bottom: 550px;
+            }
+        
+            .wrap5 img {
+            width: 250px;
+            margin: 0px;
+            float: right;        
+            position: relative;     
+            z-index: 1000;
+            margin-right: 3%;
+            margin-top: 30px;
+            box-shadow: 5px 5px 10px gray;
+            }
+        
+            .box4 {
+            padding-bottom: 40px;
+            padding-top: 40px;
+            width: 70%;
+            background-color: rgba(233, 136, 185, 0.5); 
+            position:absolute;    
+            top:70px;
+            left:20px;
+            margin-bottom: 100px;
+            box-shadow: 5px 5px 10px gray;
+            }
+    
+        
+            .wrap5 p {
+            font-size: 16px;
+            font-family: 'arial',sans-serif;
+            margin: 0px;
+            padding-left: 20%;
+            padding-right: 5%;
+            margin-right: 150px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
+            }
+        
+            .maintext4{          
+            font-size: 20px;
+            font-family: 'arial',sans-serif;
+            margin-left: 20%;
+            border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
+            padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+            font-weight: bold;
+            }
+        
+            .text4 {             /* 購入した〜 */
+            padding-top: 2%;
+            }
+        
+            ul.benefict4 li {        /* 箇条書き */
+            font-size: 16px;
+            font-family: 'arial',sans-serif;
+            list-style-type: none;
+            padding-top: 0px;
+            margin: 0px;
+            padding-left: 13%;
+            padding-right: 5%;
+            margin-right: 150px;
+            }
+        
+            /* ボタン */
+            .button4 {      
+            margin: -50px -34% 0 105%;      /* 上右下左の値 */
+            border: solid 2px #050505;
+            border-radius: 5px;             /* 角の丸み */
+            background-color: #cfcccc;
+            }
+        
+            .button4 p {
+            font-size: 16px;
+            text-align: center;  
+            margin: 0;
+            padding: 5px 0;         /* 上下　左右の値 */
+            }
+            
+            .button4:hover {
+            background-color: #0c0c0c;
+            color:#fcfafa;
+            }
+
+    
 }
 
 
