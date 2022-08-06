@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ページを様々な画面幅のデバイスでの表示に適応させるための記述。 -->
     <title>ホーム画面</title>
 
-    <link rel="stylesheet" href="home.css">         <!-- cssファイルとの結びつけ -->
+    <link rel="stylesheet" href="home 2.css">         <!-- cssファイルとの結びつけ -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
 <script src="https://kit.fontawesome.com/7d7d05729d.js" crossorigin="anonymous"></script>       <!-- fontawesome snsアイコン -->
 
+<meta name="format-detection" content="telephone=no">
+
 </head>
 
+<header>
    <nav>
     <ul class="ddmenu">
        <li><a href="#">HOME</a></li>
@@ -20,10 +25,19 @@
          <ul>
             <li><a href="#">植木鉢カバー</a></li>
             <li><a href="#">一輪挿し</a></li>
+            <li><a href="#">生活品カバー</a></li>
          </ul>
        </li>
+       <li><a href="#">SHOP</a>
+        <ul>
+            <li><a href="https://polywelle.base.shop">BASE</a></li>
+            <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+            <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+            <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+            <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+        </ul>
+      </li>
        <li><a href="file:///Users/kawarazakiisamu/Documents/3D%20printer/html/profile/profile.html">PROFILE</a></li>
-       <li><a href="#">CONTACT</a></li>
     </ul>
     </nav>
 
@@ -34,18 +48,29 @@
         <nav>
          <ul class="innner">
             <li><a href="#">HOME</a></li>
-            <li>PRODUCT</li>
-            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;植木鉢カバー</a></li>
-            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;一輪挿し</a></li>
-            <li><a href="file:///Users/kawarazakiisamu/Documents/3D%20printer/html/profile/profile.html">PROFILE</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><u>PRODUCT</u></li>
+             <ul class="submenu">
+              <li><a href="#">植木鉢カバー</a></li>
+              <li><a href="#">一輪挿し</a></li>
+              <li><a href="#">生活品カバー</a></li>
+             </ul>
+            <li><u>SHOP</u></li>
+             <ul>
+                <li><a href="https://polywelle.base.shop">BASE</a></li>
+                <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+                <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+                <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+                <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+             </ul>
+            <li><a href="https://polywelle.github.io/profile.html">PROFILE</a></li>
          </ul>
-         <ul clss="SNS">
+         <div clss="SNS">
             <li><a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com" class="flowbtn10"><i class="fab fa-instagram"></i></a></li>
-         </ul>
+            <li><a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a></li>
+         </div>
         </nav>
     </div>
+</header>
 
 
 
@@ -58,81 +83,28 @@
       <h2 class ="subtitle">3D printed products with various sine waves</h2>
     </div>
 
-   
     <div class = "wrap2 slide-bottom show">
-        <img src ='捻り茶植物2.png' alt = "植木鉢カバー">
-     <div class="box1">
-        <span class ="maintext">植木鉢カバー</span>
-        <p class ="text">誰でも手軽にインテリアコーディネート！</p>
-        <p>購入した植物をそのまま入れるだけ。</p>
-      <ul class = "benefict">
-        <li>✔️ 植え替えが不要</li>
-        <li>✔️ 軽量で持ち運びが容易</li>
-        <li>✔️ 植え替え前の保管用としても</li>
-      </ul>
-     <div class="button1">
-        <p><a href="#"></a>DETAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡︎</p>     <!-- スペースあける -->
-     </div>
-     </div>
+        <a href="##"><img src ='捻り2号.png' alt = "植木鉢カバー"></a>
+        <p class ="maintext">植木鉢カバー</p>
     </div>
-   
-
-
+        
     <div class = "wrap3 slide-bottom show">
-        <img src ='試験管花瓶.png' alt = "試験管花瓶">
-     <div class="box2">
-        <span class ="maintext2">一輪挿し</span>
-        <p class ="text2">部屋の雰囲気を華やかに！</p>
-        <p>試験管を用いた一輪挿し。</p>
-        <p>様々な用途として利用可能。</p>
-      <ul class = "benefict2">
-        <li>・ 生花</li>
-        <li>・ ドライフラワー</li>
-        <li>・ リードディフューザー</li>
-      </ul>
-     <div class="button2">
-        <p><a href="#"></a>DETAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡︎</p>     <!-- スペースあける -->
-     </div>
+        <a href="##"></a><img src ='一輪挿し.png' alt = "試験管花瓶"></a>
+        <p class ="maintext2">一輪挿し</p>
     </div>
-     </div>
+
+    <div class = "wrap4 slide-bottom show">
+        <a href="##"></a><img src ='生活品.png' alt = "生活品"></a>
+        <p class ="maintext3">生活品カバー</p>
+    </div>
+
+
+    <div class = "wrap5 slide-bottom show">
+        <a href="##"></a><img src ='Fullcontrol.png' alt = "Fullcontrol"></a>
+        <p class ="maintext4">数式で作成する3Dデータ</p>
+    </div>
+
     
-
-     <div class = "wrap4 slide-bottom show">
-        <img src ='試験管花瓶.png' alt = "試験管花瓶">
-     <div class="box3">
-        <span class ="maintext3">生活品をおしゃれに</span>
-        <p class ="text3">部屋の雰囲気を華やかに！</p>
-        <p>試験管を用いた一輪挿し。</p>
-        <p>様々な用途として利用可能。</p>
-      <ul class = "benefict3">
-        <li>・ 紙コップケース</li>
-        <li>・ 芳香剤カバー</li>
-      </ul>
-     <div class="button3">
-        <p><a href="#"></a>DETAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡︎</p>     <!-- スペースあける -->
-     </div>
-    </div>
-     </div>
-
-
-     <div class = "wrap5 slide-bottom show">
-        <img src ='試験管花瓶.png' alt = "試験管花瓶">
-     <div class="box4">
-        <span class ="maintext4">数式で作成する3Dデータ</span>
-        <p class ="text4">販売している商品の全ては数式で設計されています。</p>
-        <p>CAD（3Dモデリング）に捉われない自由な設計</p>
-        <p>様々な用途として利用可能。</p>
-      <ul class = "benefict4">
-        <li>・ 紙コップケース</li>
-        <li>・ 芳香剤カバー</li>
-      </ul>
-     <div class="button4">
-        <p><a href="#"></a>DETAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡︎</p>     <!-- スペースあける -->
-     </div>
-    </div>
-     </div>
-
-
 
     <!-- フェードイン用のコードです -->
     <script>
