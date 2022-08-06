@@ -3,6 +3,10 @@
 	box-sizing: border-box;
 }
 
+p, li {
+font-family: 'Noto Sans JP', sans-serif;
+}
+
     @media (max-width : 799px){
 
     /* メニューバー */
@@ -64,11 +68,11 @@
 
     nav li {
         padding: 15px 0;
-        margin: 10px 0;
+        margin: 0px 0;
     }
 
     nav li a:hover {
-        opacity: 0.5;
+        color: #e04b4b;
     }
 
     nav li a {
@@ -77,8 +81,13 @@
         color:black;
     }
 
+    .SNS {
+    display: flex;
+    margin:0;
+    }
+    
 
-    .flowbtn10{
+    .flowbtn10{     /* SNSアイコン */
         font-size:35px;
         text-decoration:none;
         transition:.5s;
@@ -101,13 +110,13 @@
     }
 
     .images img {
-    width:100%;       /* 1000前後がおすすめ */
-    height:800px;
+    width:100%;      
+    height:700px;
     margin: 0px;
     }
     
     .title{
-    font-size: 100px;
+    font-size: 70px;
     font-family: 'Mv Boli',cursive;
     color: #eb2929;
     text-shadow: 5px 5px 10px pink;     /* 右下ぼかし値 */
@@ -118,8 +127,7 @@
     }
    
     .subtitle{
-    font-size: 26px;
-    font-family: 'arial',sans-serif;
+    font-size: 18px;
     color: #f1f0f0;
     white-space: nowrap;   /* 改行しないようにする */
     position:absolute;    
@@ -129,335 +137,86 @@
     }    
     
 
+    /* 植木鉢カバー */
     .wrap2 {
         position: relative;       /* imgではposition効かないため */
-        margin:0;
-        padding-bottom: 550px;
+        margin: 100px 10% 0 10%;
+        text-align: center;
         }
     
         .wrap2 img {
-        width: 250px;
-        margin: 0px;
-        float: left;        /* 要素を右に回り込ませる */
+        min-width: 400px;
+        width: 100%;
         position: relative;     /* positionがないとzindex効かない */
-        z-index: 10;
-        margin-left: 2%;
-        margin-top: 160px;
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
         }
     
-        .box1 {
-        padding-bottom: 40px;
-        padding-top: 40px;
-        width: 70%;
-        background-color: rgba(244, 248, 15, 0.5); 
-        position:absolute;    
-        top:200px;
-        left:200px;
-        margin-bottom: 100px;
-        box-shadow: 5px 5px 10px gray;
-        }
-    
-        .wrap2 p {
-        font-size: 16px;
-        font-family: 'arial',sans-serif;
-        margin: 0px;
-        padding-left: 20%;
-        padding-right: 5%;
-        }
-    
-        .maintext{          /* 植木鉢カバー */
-        font-size: 20px;
-        font-family: 'arial',sans-serif;
-        margin-left: 20%;
-        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        .maintext  {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        padding: 2% 5%;
+        z-index: 10;
+        font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
         font-weight: bold;
-        }
-    
-        .text {             /* 購入した〜 */
-        padding-top: 2%;
-        }
-    
-        ul.benefict li {        /* 箇条書き */
-        font-size: 16px;
-        font-family: 'arial',sans-serif;
-        list-style-type: none;
-        padding-top: 0px;
-        margin: 0px;
-        padding-left: 14%;
-        }
-    
-        /* ボタン */
-        .button1 {      
-        margin: -60px 105% 0 -35%;      /* 上右下左の値 */
-        border: solid 2px #050505;
-        border-radius: 5px;             /* 角の丸み */
-        background-color: #cfcccc;
-        }
-    
-        .button1 p {
-        font-size: 16px;
-        text-align: center;  
-        margin: 0;
-        padding: 5px 0;         /* 上下　左右の値 */
-        }
-        
-        .button1:hover {
-        background-color: #0c0c0c;
-        color:#fcfafa;
+        color: white;
+        background-color: rgba(245, 49, 49);
         }
 
 
-        /* 試験管花瓶 */
+    /* 試験管花瓶 */
     .wrap3 {
-        position: relative;       
-        margin:0;
-        padding-bottom: 550px;
+        position: relative;       /* imgではposition効かないため */
+        margin: 100px 10% 0 10%;
+        text-align: center;
         }
     
         .wrap3 img {
-        width: 250px;
-        margin: 0px;
-        float: right;        
-        position: relative;     
-        z-index: 1000;
-        margin-right: 3%;
-        margin-top: 30px;
-        box-shadow: 5px 5px 10px gray;
+        min-width: 400px;
+        width: 100%;
+        position: relative;     /* positionがないとzindex効かない */
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
         }
     
-        .box2 {
-        padding-bottom: 40px;
-        padding-top: 40px;
-        width: 70%;
-        background-color: rgba(233, 136, 185, 0.5); 
-        position:absolute;    
-        top:70px;
-        left:20px;
-        margin-bottom: 100px;
-        box-shadow: 5px 5px 10px gray;
-        }
-
-    
-        .wrap3 p {
-        font-size: 16px;
-        font-family: 'arial',sans-serif;
-        margin: 0px;
-        padding-left: 20%;
-        padding-right: 5%;
-        margin-right: 150px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
-        }
-    
-        .maintext2{          
-        font-size: 20px;
-        font-family: 'arial',sans-serif;
-        margin-left: 20%;
-        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+        .maintext2  {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        padding: 2% 5%;
+        z-index: 10;
+        font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
         font-weight: bold;
+        color: white;
+        background-color: rgba(245, 49, 49);
         }
     
-        .text2 {             /* 購入した〜 */
-        padding-top: 2%;
-        }
-    
-        ul.benefict2 li {        /* 箇条書き */
-        font-size: 16px;
-        font-family: 'arial',sans-serif;
-        list-style-type: none;
-        padding-top: 0px;
-        margin: 0px;
-        padding-left: 13%;
-        padding-right: 5%;
-        margin-right: 150px;
-        }
-    
-        /* ボタン */
-        .button2 {      
-        margin: -50px -34% 0 105%;      /* 上右下左の値 */
-        border: solid 2px #050505;
-        border-radius: 5px;             /* 角の丸み */
-        background-color: #cfcccc;
-        }
-    
-        .button2 p {
-        font-size: 16px;
-        text-align: center;  
-        margin: 0;
-        padding: 5px 0;         /* 上下　左右の値 */
-        }
-        
-        .button2:hover {
-        background-color: #0c0c0c;
-        color:#fcfafa;
-        }
 
-
-        /* 生活品 */
-        .wrap4 {
-            position: relative;       /* imgではposition効かないため */
-            margin:0;
-            padding-bottom: 550px;
-            }
-        
-            .wrap4 img {
-            width: 250px;
-            margin: 0px;
-            float: left;        /* 要素を右に回り込ませる */
-            position: relative;     /* positionがないとzindex効かない */
-            z-index: 10;
-            margin-left: 2%;
-            margin-top: 160px;
-            box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
-            }
-        
-            .box3 {
-            padding-bottom: 40px;
-            padding-top: 40px;
-            width: 70%;
-            background-color: rgba(244, 248, 15, 0.5); 
-            position:absolute;    
-            top:200px;
-            left:200px;
-            margin-bottom: 100px;
-            box-shadow: 5px 5px 10px gray;
-            }
-        
-            .wrap3 p {
-            font-size: 16px;
-            font-family: 'arial',sans-serif;
-            margin: 0px;
-            padding-left: 20%;
-            padding-right: 5%;
-            }
-        
-            .maintext3 {          /* 植木鉢カバー */
-            font-size: 20px;
-            font-family: 'arial',sans-serif;
-            margin-left: 20%;
-            border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-            padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
-            font-weight: bold;
-            }
-        
-            .text3 {             /* 購入した〜 */
-            padding-top: 2%;
-            }
-        
-            ul.benefict3 li {        /* 箇条書き */
-            font-size: 16px;
-            font-family: 'arial',sans-serif;
-            list-style-type: none;
-            padding-top: 0px;
-            margin: 0px;
-            padding-left: 14%;
-            }
-        
-            /* ボタン */
-            .button3 {      
-            margin: -60px 105% 0 -35%;      /* 上右下左の値 */
-            border: solid 2px #050505;
-            border-radius: 5px;             /* 角の丸み */
-            background-color: #cfcccc;
-            }
-        
-            .button3 p {
-            font-size: 16px;
-            text-align: center;  
-            margin: 0;
-            padding: 5px 0;         /* 上下　左右の値 */
-            }
-            
-            .button3:hover {
-            background-color: #0c0c0c;
-            color:#fcfafa;
-            }
+    /* FullControl */
+    .wrap4 {
+        position: relative;       /* imgではposition効かないため */
+        margin: 100px 10% 0 10%;
+        text-align: center;
+        }
     
+        .wrap4 img {
+        min-width: 400px;
+        width: 100%;
+        position: relative;     /* positionがないとzindex効かない */
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
+        }
     
-            /* Fullcontrol */
-        .wrap3 {
-            position: relative;       
-            margin:0;
-            padding-bottom: 550px;
-            }
-        
-            .wrap5 img {
-            width: 250px;
-            margin: 0px;
-            float: right;        
-            position: relative;     
-            z-index: 1000;
-            margin-right: 3%;
-            margin-top: 30px;
-            box-shadow: 5px 5px 10px gray;
-            }
-        
-            .box4 {
-            padding-bottom: 40px;
-            padding-top: 40px;
-            width: 70%;
-            background-color: rgba(233, 136, 185, 0.5); 
-            position:absolute;    
-            top:70px;
-            left:20px;
-            margin-bottom: 100px;
-            box-shadow: 5px 5px 10px gray;
-            }
+        .maintext3  {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        padding: 2% 5%;
+        z-index: 10;
+        font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
+        font-weight: bold;
+        color: white;
+        background-color: rgba(245, 49, 49);
+        }
     
-        
-            .wrap5 p {
-            font-size: 16px;
-            font-family: 'arial',sans-serif;
-            margin: 0px;
-            padding-left: 20%;
-            padding-right: 5%;
-            margin-right: 150px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
-            }
-        
-            .maintext4{          
-            font-size: 20px;
-            font-family: 'arial',sans-serif;
-            margin-left: 20%;
-            border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-            padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
-            font-weight: bold;
-            }
-        
-            .text4 {             /* 購入した〜 */
-            padding-top: 2%;
-            }
-        
-            ul.benefict4 li {        /* 箇条書き */
-            font-size: 16px;
-            font-family: 'arial',sans-serif;
-            list-style-type: none;
-            padding-top: 0px;
-            margin: 0px;
-            padding-left: 13%;
-            padding-right: 5%;
-            margin-right: 150px;
-            }
-        
-            /* ボタン */
-            .button4 {      
-            margin: -50px -34% 0 105%;      /* 上右下左の値 */
-            border: solid 2px #050505;
-            border-radius: 5px;             /* 角の丸み */
-            background-color: #cfcccc;
-            }
-        
-            .button4 p {
-            font-size: 16px;
-            text-align: center;  
-            margin: 0;
-            padding: 5px 0;         /* 上下　左右の値 */
-            }
-            
-            .button4:hover {
-            background-color: #0c0c0c;
-            color:#fcfafa;
-            }
 
     
 }
@@ -493,7 +252,6 @@
         text-decoration: none;  /* リンクの下線を消す */
         color: white;
         font-weight: bold;
-        font-family: 'arial',sans-serif;
         display: block;         /* 項目内全域をリンク可能 */
         line-height: 40px;
         padding-right: 200px;
@@ -528,7 +286,7 @@
         font-weight: normal;
     }
     ul.ddmenu ul li a:hover {
-        color: #a19f9f;
+        color: #e04b4b;
     }
 
 
@@ -552,7 +310,7 @@
     .title{
     font-size: 120px;
     font-family: 'Mv Boli',cursive;
-    color: #eb2929;
+    color: rgba(245, 49, 49);
     text-shadow: 5px 5px 10px pink;     /* 右下ぼかし値 */
     position:absolute;    /* 親要素の位置から相対的に移動 */
     top:30%;
@@ -575,339 +333,146 @@
     /* 植木鉢カバー */
     .wrap2 {
     position: relative;       /* imgではposition効かないため */
-    margin:0;
-    padding-bottom: 550px;
+    margin: 200px 10% 0 10%;
+    text-align: center;
     }
 
     .wrap2 img {
     min-width: 400px;
-    width: 35%;
-    margin: 0px;
-    float: left;        /* 要素を右に回り込ませる */
+    width: 100%;
     position: relative;     /* positionがないとzindex効かない */
-    z-index: 1000;
-    margin-left: 10%;
-    margin-top: 160px;
     box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
     }
 
-    .box1 {
-    padding-bottom: 40px;
-    padding-top: 40px;
-    width: 70%;
-    background-color: rgba(244, 248, 15, 0.5); 
-    position:absolute;    
-    top:200px;
-    left:300px;
-    margin-bottom: 100px;
-    box-shadow: 5px 5px 10px gray;
-    }
-
-    .wrap2 p {
-    font-size: 18px;
-    font-family: 'arial',sans-serif;
-    margin: 0px;
-    padding-left: 40%;
-    padding-right: 5%;
-    }
-
-    .maintext{          /* 植木鉢カバー */
-    font-size: 24px;
-    font-family: 'arial',sans-serif;
-    margin-left: 40%;
-    border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-    padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
+    .maintext  {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    padding: 2% 5%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 1s ease;
+    padding-top: 0;
+    font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
     font-weight: bold;
+    color: white;
+    background-color: rgba(30, 80, 43, 0.5);
     }
 
-    .text {             /* 購入した〜 */
-    padding-top: 2%;
-    }
-
-    ul.benefict li {        /* 箇条書き */
-    font-size: 18px;
-    font-family: 'arial',sans-serif;
-    list-style-type: none;
-    padding-top: 0px;
-    margin: 0px;
-    padding-left: 40%;
-    }
-
-    /* ボタン */
-    .button1 {      
-    margin: 30px 10% 0 70%;      /* 上右下左の値 */
-    border: solid 2px #050505;
-    border-radius: 5px;             /* 角の丸み */
-    background-color: #cfcccc;
-    }
-
-    .button1 p {
-    font-size: 18px;
-    text-align: center;  
-    margin: 0;
-    padding: 10px 0;         /* 上下　左右の値 */
-    }
-    
-    .button1:hover {
-    background-color: #0c0c0c;
-    color:#fcfafa;
+    .wrap2:hover .maintext {
+    opacity: 1;
+    padding-top:2%;
     }
 
 
     /* 試験管花瓶 */
     .wrap3 {
-        position: relative;       
-        margin:0;
-        padding-bottom: 550px;
+        position: relative;       /* imgではposition効かないため */
+        margin: 200px 10% 0 10%;
+        text-align: center;
         }
     
         .wrap3 img {
         min-width: 400px;
-        width: 35%;
-        margin: 0px;
-        float: right;        
-        position: relative;     
-        z-index: 1000;
-        margin-right: 9%;
-        margin-top: 160px;
-        box-shadow: 5px 5px 10px gray;
+        width: 100%;
+        position: relative;     /* positionがないとzindex効かない */
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
         }
     
-        .box2 {
-        padding-bottom: 20px;
-        padding-top: 40px;
-        width: 70%;
-        background-color: rgba(233, 136, 185, 0.5); 
-        position:absolute;    
-        top:190px;
-        left:150px;
-        margin-bottom: 100px;
-        box-shadow: 5px 5px 10px gray;
-        }
-
-    
-        .wrap3 p {
-        font-size: 18px;
-        font-family: 'arial',sans-serif;
-        margin: 0px;
-        padding-left: 20%;
-        padding-right: 5%;
-        margin-right: 350px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
-        }
-    
-        .maintext2{          
-        font-size: 24px;
-        font-family: 'arial',sans-serif;
-        margin-left: 20%;
-        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
-        font-weight: bold;
-        }
-    
-        .text2 {             /* 購入した〜 */
-        padding-top: 2%;
-        }
-    
-        ul.benefict2 li {        /* 箇条書き */
-        font-size: 18px;
-        font-family: 'arial',sans-serif;
-        list-style-type: none;
-        padding-top: 0px;
-        margin: 0px;
-        padding-left: 17%;
-        padding-right: 5%;
-        }
-    
-        /* ボタン */
-        .button2 {      
-        margin: 30px 50% 0 30%;      /* 上右下左の値 */
-        border: solid 2px #050505;
-        border-radius: 5px;             /* 角の丸み */
-        background-color: #cfcccc;
-        }
-    
-        .button2 p {
-        font-size: 18px;
-        text-align: center;  
-        margin: 0;
-        padding: 10px 0;         /* 上下　左右の値 */
-        }
+        .maintext2  {
+            position: absolute;
+            top: 2%;
+            left: 5%;
+            padding: 2% 5%;
+            z-index: 10;
+            opacity: 0;
+            transition: all 1s ease;
+            padding-top: 0;
+            font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
+            font-weight: bold;
+            color: white;
+            background-color: rgba(107, 29, 103, 0.5);
+            }
         
-        .button2:hover {
-        background-color: #0c0c0c;
-        color:#fcfafa;
-        }
-
-
+        .wrap3:hover .maintext2 {
+            opacity: 1;
+            padding-top:2%;
+            }
+        
+    
     /* 生活品 */
     .wrap4 {
         position: relative;       /* imgではposition効かないため */
-        margin:0;
-        padding-bottom: 550px;
-    }
+        margin: 200px 10% 0 10%;
+        text-align: center;
+        }
     
-    .wrap4 img {
+        .wrap4 img {
         min-width: 400px;
-        width: 35%;
-        margin: 0px;
-        float: left;        /* 要素を右に回り込ませる */
+        width: 100%;
         position: relative;     /* positionがないとzindex効かない */
-        z-index: 1000;
-        margin-left: 10%;
-        margin-top: 160px;
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
-    }
+        }
     
-    .box3 {
-        padding-bottom: 40px;
-        padding-top: 40px;
-        width: 70%;
-        background-color: rgba(244, 248, 15, 0.5); 
-        position:absolute;    
-        top:200px;
-        left:300px;
-        margin-bottom: 100px;
-        box-shadow: 5px 5px 10px gray;
-    }
-    
-    .wrap4 p {
-        font-size: 18px;
-        font-family: 'arial',sans-serif;
-        margin: 0px;
-        padding-left: 40%;
-        padding-right: 5%;
-    }
-    
-    .maintext3 {          /* 植木鉢カバー */
-        font-size: 24px;
-        font-family: 'arial',sans-serif;
-        margin-left: 40%;
-        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
-        font-weight: bold;
-    }
-    
-    .text3 {             /* 購入した〜 */
-        padding-top: 2%;
-    }
-    
-    ul.benefict3 li {        /* 箇条書き */
-        font-size: 18px;
-        font-family: 'arial',sans-serif;
-        list-style-type: none;
-        padding-top: 0px;
-        margin: 0px;
-        padding-left: 40%;
-    }
-    
-    /* ボタン */
-    .button3 {      
-        margin: 30px 10% 0 70%;      /* 上右下左の値 */
-        border: solid 2px #050505;
-        border-radius: 5px;             /* 角の丸み */
-        background-color: #cfcccc;
-    }
-    
-    .button3 p {
-        font-size: 18px;
-        text-align: center;  
-        margin: 0;
-        padding: 10px 0;         /* 上下　左右の値 */
-    }
+        .maintext3  {
+            position: absolute;
+            top: 2%;
+            left: 5%;
+            padding: 2% 5%;
+            z-index: 10;
+            opacity: 0;
+            transition: all 1s ease;
+            padding-top: 0;
+            font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
+            font-weight: bold;
+            color: white;
+            background-color: rgba(16, 21, 104, 0.5);
+            }
         
-    .button3:hover {
-        background-color: #0c0c0c;
-        color:#fcfafa;
-    }
+        .wrap4:hover .maintext3 {
+            opacity: 1;
+            padding-top:2%;
+            }
 
-
-
-     /* FullControl Gcode Designer */
-     .wrap5 {
-        position: relative;       
-        margin:0;
-        padding-bottom: 550px;
+        
+        /* FullControl */
+    .wrap5 {
+        position: relative;       /* imgではposition効かないため */
+        margin: 200px 10% 0 10%;
+        text-align: center;
+        margin-bottom: 20%;
         }
     
         .wrap5 img {
         min-width: 400px;
-        width: 35%;
-        margin: 0px;
-        float: right;        
-        position: relative;     
-        z-index: 1000;
-        margin-right: 9%;
-        margin-top: 160px;
-        box-shadow: 5px 5px 10px gray;
+        width: 100%;
+        position: relative;     /* positionがないとzindex効かない */
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
         }
     
-        .box4 {
-        padding-bottom: 20px;
-        padding-top: 40px;
-        width: 70%;
-        background-color: rgba(233, 136, 185, 0.5); 
-        position:absolute;    
-        top:190px;
-        left:150px;
-        margin-bottom: 100px;
-        box-shadow: 5px 5px 10px gray;
-        }
-
-    
-        .wrap5 p {
-        font-size: 18px;
-        font-family: 'arial',sans-serif;
-        margin: 0px;
-        padding-left: 20%;
-        padding-right: 5%;
-        margin-right: 350px;        /* 余白%のみでは画面縮小でレイアウト崩れる */
-        }
-    
-        .maintext4 {          
-        font-size: 24px;
-        font-family: 'arial',sans-serif;
-        margin-left: 20%;
-        border-bottom: 2px solid rgb(14, 13, 13);           /* アンダーライン */
-        padding-bottom: 5px;                        /* アンダーラインと文字との間隔 */
-        font-weight: bold;
-        }
-    
-        .text4 {             /* 購入した〜 */
-        padding-top: 2%;
-        }
-    
-        ul.benefict4 li {        /* 箇条書き */
-        font-size: 18px;
-        font-family: 'arial',sans-serif;
-        list-style-type: none;
-        padding-top: 0px;
-        margin: 0px;
-        padding-left: 17%;
-        padding-right: 5%;
-        }
-    
-        /* ボタン */
-        .button4 {      
-        margin: 30px 50% 0 30%;      /* 上右下左の値 */
-        border: solid 2px #050505;
-        border-radius: 5px;             /* 角の丸み */
-        background-color: #cfcccc;
-        }
-    
-        .button4 p {
-        font-size: 18px;
-        text-align: center;  
-        margin: 0;
-        padding: 10px 0;         /* 上下　左右の値 */
-        }
+        .maintext4  {
+            position: absolute;
+            top: 2%;
+            left: 5%;
+            padding: 2% 5%;
+            z-index: 10;
+            opacity: 0;
+            transition: all 1s ease;
+            padding-top: 0;
+            font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
+            font-weight: bold;
+            color: rgb(250, 248, 248);
+            background-color: rgb(68, 66, 63);
+            }
         
-        .button4:hover {
-        background-color: #0c0c0c;
-        color:#fcfafa;
-        }
+        .wrap5:hover .maintext4 {
+            opacity: 1;
+            padding-top:2%;
+            }
+   
 
-}
 
+    
 
 /* 下からフェードイン */
 .slide-bottom {
@@ -915,3 +480,5 @@
 	transform: translate(0, 20px);          /* 要素の上下左右の調整　左右が0下20pxから */
 	transition: all 2s 0s ease-out;        /* 全てを対象、変化の時間、待機時間、ゆっくり終わる */
  }
+
+}
