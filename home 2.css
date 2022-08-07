@@ -160,7 +160,7 @@ font-family: 'Noto Sans JP', sans-serif;
         font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
         font-weight: bold;
         color: white;
-        background-color: rgba(245, 49, 49);
+        background-color: rgba(30, 80, 43, 0.5);
         }
 
 
@@ -187,11 +187,11 @@ font-family: 'Noto Sans JP', sans-serif;
         font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
         font-weight: bold;
         color: white;
-        background-color: rgba(245, 49, 49);
+        background-color: rgba(107, 29, 103, 0.5);
         }
     
 
-    /* FullControl */
+    /* 生活品 */
     .wrap4 {
         position: relative;       /* imgではposition効かないため */
         margin: 100px 10% 0 10%;
@@ -214,11 +214,37 @@ font-family: 'Noto Sans JP', sans-serif;
         font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
         font-weight: bold;
         color: white;
-        background-color: rgba(245, 49, 49);
+        background-color: rgba(16, 21, 104, 0.5);
+        }
+
+        
+        /*Fullcontrol */      
+        .wrap5 {
+        position: relative;       /* imgではposition効かないため */
+        margin: 100px 10% 0 10%;
+        text-align: center;
+        margin-bottom: 20%;
         }
     
-
+        .wrap5 img {
+        min-width: 400px;
+        width: 100%;
+        position: relative;     /* positionがないとzindex効かない */
+        box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
+        }
     
+        .maintext4  {
+            position: absolute;
+            top: 2%;
+            left: 5%;
+            padding: 2% 5%;
+            z-index: 10;
+            font-size: 2vw;             /* 画面サイズの幅に合わせて変化 */
+            font-weight: bold;
+            color: rgb(250, 248, 248);
+            background-color: rgb(68, 66, 63);
+            }
+        
 }
 
 
