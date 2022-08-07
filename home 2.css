@@ -127,7 +127,7 @@ font-family: 'Noto Sans JP', sans-serif;
     }
    
     .subtitle{
-    font-size: 18px;
+    font-size: 3vw;
     color: #f1f0f0;
     white-space: nowrap;   /* 改行しないようにする */
     position:absolute;    
