@@ -3,14 +3,8 @@
 	box-sizing: border-box;
 }
 
-p, li {
-font-family: 'Noto Sans JP', sans-serif;
-}
-
-
-    @media (max-width : 799px){
-
-    /* メニューバー */
+@media (max-width : 640px){
+ /* メニューバー */
     ul.ddmenu {
     display: none;
     }
@@ -82,102 +76,83 @@ font-family: 'Noto Sans JP', sans-serif;
         color:black;
     }
 
+    .SNS {
+    display: flex;
+    margin-left:10px;
+    }
     
 
     .flowbtn10{     /* SNSアイコン */
         font-size:35px;
-        text-decoration:none;
         transition:.5s;
         color:#444;	
+        padding-left: 30px;
         }
-
-   
-
-
-    /* 全体の背景色 */
-    body{                                   
-        background-color: #a09c9c;
-    }
-    
-
-   h1 {
-    padding: 100px 0 0 5%;
-    color:rgb(248, 4, 4);
-    font-size: 3.5vw;
-    }
-
-    .paper_cup {
-        margin: 50px 5% 0 10%;
-        }
-    
-        .paper_cup p {
-        font-size: 1.5vw;
-        }
-    
-    .paper_cup2 {
-        margin-top: 20px;
-        margin-left: 15%;
-    }
-
-        .paper_cup2 img {
-        width: 90%;
-        }
-
-    .youtube {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        width:50%;
-        aspect-ratio:16/9;
     }
 
 
-    .design {
-        margin: 50px 5% 0 10%;
-        }
-    
-        .design p {
-        font-size: 1.5vw;
-        }
-    
-    .design2 {
-        margin-top: 20px;
-        margin-left: 15%;
-    }
-
-        .design2 img {
-        width: 90%;
-        }
-
-    
-    .function {
-        margin: 50px 5% 0 10%;
-        }
-    
-        .function p {
-        font-size: 1.5vw;
-        }
-    
-    .function2 {
-        margin-top: 20px;
-        margin-left: 15%;
-        margin-bottom: 30%;
-    }
-
-        .function2 img {
-        width: 90%;
-        }
-    
+body{                                   /* 全体の背景色 */
+    background-color: #a09c9c;
 }
 
 
 
-@media (min-width : 800px){         /* 携帯750px */
+.title{
+font-size: 40px;
+font-family: 'Noto Sans JP', sans-serif;
+color: #070707;
+text-align: center;
+}
 
-    /* メニューバー */
-    .ddmenu {
+
+
+.timeline{
+list-style: none;
+padding-top: 150px;
+}
+.timeline > li {
+margin-bottom: 60px;
+}
+
+h3 {
+font-size: 16px;
+}
+
+.timeline-date {
+text-decoration: underline;
+}
+
+
+p {
+    margin:0;
+}
+
+.margin {
+    padding-top: 30px;
+}
+
+a {
+    color:rgb(42, 20, 240);
+    text-decoration: none;      /* リンクのアンダーバー消す */
+    /* transition: color 0.5s; */     /* マウスオーバー時に文字色が変わる時間設定 */
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.last-margin {
+    padding-bottom: 60px;
+}
+
+
+
+/* デスクトップ用 */
+@media (min-width : 640px){
+
+
+  /* メニューバー */
+  .ddmenu {
     text-align: center;    
     }
 
@@ -243,92 +218,47 @@ font-family: 'Noto Sans JP', sans-serif;
     }
 
 
-    body{                                   /* 全体の背景色 */
-        background-color: #a09c9c;
-    }
     
-
-    h1 {
-    margin: 100px 0 0 5%;
-    color:rgb(248, 4, 4);
-    font-size: 2.5vw;
-    font-family: 'Noto Sans JP', sans-serif;
+    .timeline > li  {  
+    overflow: hidden;         /* フロートをリセット　ないと次の文章がずれる */
+     margin: 0;
+     position: relative;
     }
 
-
-    .paper_cup {
-        margin: 50px 5% 0 10%;
-        }
-    
-        .paper_cup p {
-        font-size: 1.5vw;
-        }
-    
-    .paper_cup2 {
-        margin-top: 20px;
-        margin-left: 15%;
+    .timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 16px;
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
     }
 
-        .paper_cup2 img {
-        width: 90%;
-        }
+    .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;    /* 縦線の色 */
+    padding-left: 30px;
+    padding-top: 30px;
+    }   
 
-    .youtube {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        width:50%;
-        aspect-ratio:16/9;
+    .timeline-content:before {     /* 丸印 */
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #ee0a8f;
+    position: absolute;
+    left: 104px;
+    top: 54px;
+    border-radius: 100%;
+    }
+
+    h3 { 
+    font-size: 20px;
     }
 
 
-    .design {
-        margin: 50px 5% 0 10%;
-        }
-    
-        .design p {
-        font-size: 1.5vw;
-        }
-    
-    .design2 {
-        margin-top: 20px;
-        margin-left: 15%;
-    }
-
-        .design2 img {
-        width: 90%;
-        }
-
-    
-    .function {
-        margin: 50px 5% 0 10%;
-        }
-    
-        .function p {
-        font-size: 1.5vw;
-        }
-    
-    .function2 {
-        margin-top: 20px;
-        margin-left: 15%;
-        margin-bottom: 30%;
-    }
-
-        .function2 img {
-        width: 90%;
-        }
+}                           /* デスクトップ用ここまで */
 
 
 
-    
-
-/* 下からフェードイン */
-.slide-bottom {
-	opacity: 0;                             /* アニメーションが実行される前の状態　要素の透明度が0 */
-	transform: translate(0, 20px);          /* 要素の上下左右の調整　左右が0下20pxから */
-	transition: all 2s 0s ease-out;        /* 全てを対象、変化の時間、待機時間、ゆっくり終わる */
- }
-
-}
