@@ -3,31 +3,112 @@
 	box-sizing: border-box;
 }
 
+@media (max-width : 640px){
+ /* メニューバー */
+    ul.ddmenu {
+    display: none;
+    }
+
+    #humMenu {
+        padding: 12px;
+        position: fixed;
+        z-index: 20;
+    }
+
+    #humCheck, #humClose {display: none;}
+    #humOpen {
+        display: block;             /* ブロック要素にする */
+        width: 58px;
+        cursor: pointer;            /* マウスの矢印が変化する */
+    }
+
+    #humOpen:hover {
+        opacity: 0.5;           /* 透明度 */
+    }
+
+    #humOpen img {display: block;}
+    #humClose, nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    #humClose {             /* クリック後の背景画面 */
+        z-index: 2;
+        width: 100%;
+        background: rgb(148, 146, 146);
+        opacity: 0.8;
+        transition: 0.5s;           /* アニメーションタイム */
+    }
+
+    nav{                /* クリック後のメイン画面 */
+        z-index: 3;
+        width: 330px;
+        background: rgb(218, 218, 218);
+        transition: 0.5s;
+        transform: translateX(-100%);
+    }
+
+    #humCheck:checked ~ #humClose {display: block;}         /* もう一度押すとメニューが閉じる */
+    #humCheck:checked ~ nav {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        overflow: hidden;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    nav li {
+        padding: 8px 0;
+        margin: 0px 0;
+    }
+
+    nav li a:hover {
+        color: #e04b4b;
+    }
+
+    nav li a {
+        font-size: 20px;
+        text-decoration: none;
+        color:black;
+    }
+
+    .SNS {
+    display: flex;
+    margin-left:10px;
+    }
+    
+
+    .flowbtn10{     /* SNSアイコン */
+        font-size:35px;
+        transition:.5s;
+        color:#444;	
+        padding-left: 30px;
+        }
+    }
+
+
 body{                                   /* 全体の背景色 */
     background-color: #a09c9c;
 }
 
-.wrap {
-width: 100vw;
-height: 100px;
-margin: 0 auto;  /* 上の余白０ */ 
-position: relative; /* 親要素の位置を固定 */
-}
 
 
 .title{
 font-size: 40px;
-font-family: 'Mv Boli',cursive;
+font-family: 'Noto Sans JP', sans-serif;
 color: #070707;
-position:absolute;    /* 親要素の位置から相対的に移動 */
-top:20%;
-left:50%;
-transform: translate(-50%,-50%);   /* 子要素のどの部分を真ん中にするか */
+text-align: center;
 }
 
-/* 携帯用 */
+
+
 .timeline{
 list-style: none;
+padding-top: 150px;
 }
 .timeline > li {
 margin-bottom: 60px;
@@ -40,51 +121,6 @@ font-size: 16px;
 .timeline-date {
 text-decoration: underline;
 }
-
-/* デスクトップ用 */
-@media (min-width : 640px){
-
-.timeline > li  {  
- overflow: hidden;         /* フロートをリセット　ないと次の文章がずれる */
- margin: 0;
- position: relative;
-}
-
-.timeline-date {
- width: 110px;
- float: left;
- margin-top: 16px;
- padding-top: 30px;
- font-size: 20px;
- font-weight: bold;
-}
-
-.timeline-content {
- width: 75%;
- float: left;
- border-left: 3px #e5e5d1 solid;    /* 縦線の色 */
- padding-left: 30px;
- padding-top: 30px;
-}
-
-.timeline-content:before {     /* 丸印 */
-content: '';
-width: 15px;
-height: 15px;
-background: #ee0a8f;
-position: absolute;
-left: 104px;
-top: 54px;
-border-radius: 100%;
-}
-
-h3 {
-font-size: 20px;
-}
-
-
-}                           /* デスクトップ用ここまで */
-
 
 
 p {
@@ -108,3 +144,121 @@ a:hover {
 .last-margin {
     padding-bottom: 60px;
 }
+
+
+
+/* デスクトップ用 */
+@media (min-width : 640px){
+
+
+  /* メニューバー */
+  .ddmenu {
+    text-align: center;    
+    }
+
+    #humMenu {
+    display: none;
+    }
+
+    ul.ddmenu {
+        margin: 0px;
+        padding-top: 5px;
+        margin-left: 10%;
+        /* width: 1000px;
+        display: flex; */    /* 横並びに配置 */
+    }
+    
+    ul.ddmenu li {
+        list-style: none;       /* liタグの箇条書きの点を消す */
+        display: inline-block;   /* 横並びに配置 */
+        width: 24%;
+        position:relative;
+    }
+    ul.ddmenu a {
+        text-decoration: none;  /* リンクの下線を消す */
+        color: white;
+        font-weight: bold;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: block;         /* 項目内全域をリンク可能 */
+        line-height: 40px;
+        padding-right: 200px;
+    }
+    ul.ddmenu a:hover{
+        color: rgb(12, 12, 12);      /* マウスオーバー時の文字色 */
+    }
+
+    /* 通常時のサブメニュー */
+    ul.ddmenu ul{
+        display: none;      /* 標準では非表示 */
+        margin-top: 0px;        /* 外側の余白0 */
+        padding: 0px;       /* 内側の余白0 */
+        position: absolute;
+        z-index: 1000;      /* 最前面に設定 */
+    }
+    ul.ddmenu li:hover ul{
+        display: block;     /* マウスが載っている間項目を表示 */
+        background-color: rgba(12, 12, 12, 0.3);        /* 最後の数字は透過度 */
+    }
+    
+    /* サブメニューの装飾 */
+    ul.ddmenu ul li {
+        width: 80%;
+        /* border-top: 1px solid rgb(156, 154, 154);  */      /* 横線 */
+    }
+    ul.ddmenu ul li a {
+        line-height: 35px;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-weight: normal;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    ul.ddmenu ul li a:hover {
+        color: #e04b4b;
+    }
+
+
+    
+    .timeline > li  {  
+    overflow: hidden;         /* フロートをリセット　ないと次の文章がずれる */
+     margin: 0;
+     position: relative;
+    }
+
+    .timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 16px;
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    }
+
+    .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;    /* 縦線の色 */
+    padding-left: 30px;
+    padding-top: 30px;
+    }   
+
+    .timeline-content:before {     /* 丸印 */
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #ee0a8f;
+    position: absolute;
+    left: 104px;
+    top: 54px;
+    border-radius: 100%;
+    }
+
+    h3 { 
+    font-size: 20px;
+    }
+
+
+}                           /* デスクトップ用ここまで */
+
+
+
