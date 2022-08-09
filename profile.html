@@ -7,20 +7,76 @@
 
     <link rel="stylesheet" href="profile.css">         <!-- cssファイルとの結びつけ -->
 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
 <script src="https://kit.fontawesome.com/7d7d05729d.js" crossorigin="anonymous"></script>       <!-- fontawesome snsアイコン -->
-    
-<meta name="format-detection" content="telephone=no">
+
+<meta name="format-detection" content="telephone=no">       <!-- 携帯で電話番号リンクさせない -->
 
 </head>
 
 
-<body>
+<header>
+  <nav>
+   <ul class="ddmenu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">PRODUCT</a>
+        <ul>
+           <li><a href="#">植木鉢カバー</a></li>
+           <li><a href="#">一輪挿し</a></li>
+           <li><a href="#">生活品カバー</a></li>
+        </ul>
+      </li>
+      <li><a href="#">SHOP</a>
+       <ul>
+           <li><a href="https://polywelle.base.shop">BASE</a></li>
+           <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+           <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+           <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+           <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+       </ul>
+     </li>
+      <li><a href="file:///Users/kawarazakiisamu/Documents/3D%20printer/html/profile/profile.html">PROFILE</a></li>
+   </ul>
+   </nav>
 
-    <div class = "wrap">
-      <h1 class ="title">Profile</h1>
-    </div>
+   <div id ="humMenu">
+       <input id ="humCheck" type ="checkbox">         <!-- idとclssの違い　idは一度のみ#　classは何度でも. -->
+       <label id ="humOpen" for="humCheck"><img src ="icon.png" alt ="メニュー" width="34" heught="28"></label>
+       <label id ="humClose" for="humCheck"></label>
+       <nav>
+        <ul class="innner">
+           <li><a href="#">HOME</a></li>
+           <li><u>PRODUCT</u></li>
+            <ul class="submenu">
+             <li><a href="#">植木鉢カバー</a></li>
+             <li><a href="#">一輪挿し</a></li>
+             <li><a href="#">生活品カバー</a></li>
+            </ul>
+           <li><u>SHOP</u></li>
+            <ul>
+               <li><a href="https://polywelle.base.shop">BASE</a></li>
+               <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+               <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+               <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+               <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+            </ul>
+           <li><a href="https://polywelle.github.io/profile.html">PROFILE</a></li>
+        </ul>
+        <div clss="SNS">
+           <a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a>
+           <a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a>
+        </div>
+       </nav>
+   </div>
+</header>
+
+
+
+
+<body>
 
 
     <ul class="timeline">
