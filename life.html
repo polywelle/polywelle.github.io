@@ -1,0 +1,133 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="utf-8">  <!-- 文字エンコードの指定。簡単に言うと文字化けを防ぐための記述。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ページを様々な画面幅のデバイスでの表示に適応させるための記述。 -->
+    <title>ホーム画面</title>
+
+    <link rel="stylesheet" href="life.css">         <!-- cssファイルとの結びつけ -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">      <!-- google fonts -->
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>   <!-- iQueryアニメーション -->
+
+<script src="https://kit.fontawesome.com/7d7d05729d.js" crossorigin="anonymous"></script>       <!-- fontawesome snsアイコン -->
+
+<meta name="format-detection" content="telephone=no">   <!-- 携帯番号リンクつけない -->
+
+</head>
+
+<header>
+   <nav>
+    <ul class="ddmenu">
+        <li><a href="https://polywelle.github.io">HOME</a></li>
+        <li><a>PRODUCT</a>
+          <ul>
+             <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
+             <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
+             <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
+          </ul>
+        </li>
+        <li><a>SHOP</a>
+         <ul>
+             <li><a href="https://polywelle.base.shop">BASE</a></li>
+             <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+             <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+             <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+             <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+         </ul>
+       </li>
+        <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
+     </ul>
+     </nav>
+ 
+     <div id ="humMenu">
+         <input id ="humCheck" type ="checkbox">         <!-- idとclssの違い　idは一度のみ#　classは何度でも. -->
+         <label id ="humOpen" for="humCheck"><img src ="icon.png" alt ="メニュー" width="34" heught="28"></label>
+         <label id ="humClose" for="humCheck"></label>
+         <nav>
+          <ul class="innner">
+             <li><a href="https://polywelle.github.io">HOME</a></li>
+             <li><u>PRODUCT</u></li>
+              <ul class="submenu">
+                 <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
+                 <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
+                 <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
+             </ul>
+            <li><u>SHOP</u></li>
+             <ul>
+                <li><a href="https://polywelle.base.shop">BASE</a></li>
+                <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+                <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+                <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+                <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+             </ul>
+            <li><a href="https://polywelle.github.io/profile.html">PROFILE</a></li>
+         </ul>
+         <ul clss="SNS">
+            <a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a>
+         </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+<body>
+    
+    <h1>紙コップホルダー</h1>
+
+    <div class='paper_cup'>
+        <p>デザインと持ちやすさにこだわった2サイズ対応の紙コップホルダー</p>
+    </div>
+    <div class="paper_cup2">
+        <img src ='紙コップ.png' alt = "紙コップ">
+    </div>
+    
+    <iframe class ="youtube" src="https://www.youtube.com/embed/Q4xcIwdTrnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <h1>芳香剤カバー</h1>
+
+    <div class='design'>
+        <p>市販の芳香剤を隠し、おしゃれ空間を生み出す芳香剤カバー</p>
+    </div>
+    <div class="design2">
+        <img src ='芳香剤.png' alt = "芳香剤">
+    </div>
+
+    <div class='function'>
+        <p>通気性を維持しつつ、外からは芳香剤が見えない構造</p>
+    </div>
+    <div class="function2">
+        <img src ='芳香剤2.png' alt = "芳香剤2">
+    </div>
+
+    
+
+    
+
+
+    <!-- フェードイン用のコードです -->
+    <script>
+        $(function(){
+            $(window).on('load scroll', function() {        /* ロードした時とスクロールした時に処理を実行 */
+                $(".show").each(function() {                    /* showクラスを発見する度に処理を実行 */
+                    var winScroll = $(window).scrollTop();      /* スクロール量を取得して変数に入れる */
+                    var winHeight = $(window).height();         /* ウィンドウの高さを取得して変数に入れる */
+                    var scrollPos = winScroll + (winHeight * 0.9);      /* 要素がウィンドウのどの位置まで来たら処理を開始するか */
+                    if($(this).offset().top < scrollPos) {                  /* 要素がウィンドウの指定した位置まで来たらCSSを調整 */
+                        $(this).css({opacity: 1, transform: 'translate(0, 0)'});    /* 実行されると透明度1,元の位置に変化 */
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    
+</body>
+</html>
