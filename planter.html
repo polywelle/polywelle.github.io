@@ -5,168 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ページを様々な画面幅のデバイスでの表示に適応させるための記述。 -->
     <title>ホーム画面</title>
 
-    <link rel="stylesheet" href="planter.css">         <!-- cssファイルとの結びつけ -->
+    <link rel="stylesheet" href="profile.css">         <!-- cssファイルとの結びつけ -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">      <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
 
-
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>   <!-- iQueryアニメーション -->
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
 <script src="https://kit.fontawesome.com/7d7d05729d.js" crossorigin="anonymous"></script>       <!-- fontawesome snsアイコン -->
 
-<meta name="format-detection" content="telephone=no">   <!-- 携帯番号リンクつけない -->
+<meta name="format-detection" content="telephone=no">       <!-- 携帯で電話番号リンクさせない -->
 
 </head>
 
+
 <header>
-   <nav>
+  <nav>
     <ul class="ddmenu">
-       <li><a href="https://polywelle.github.io">HOME</a></li>
-       <li><a>PRODUCT</a>
-         <ul>
-            <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
-            <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
-            <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
-         </ul>
-       </li>
-       <li><a>SHOP</a>
+      <li><a href="https://polywelle.github.io">HOME</a></li>
+      <li><a>PRODUCT</a>
         <ul>
-            <li><a href="https://polywelle.base.shop">BASE</a></li>
-            <li><a href="https://minne.com/@136631isaisa">minne</a></li>
-            <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
-            <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
-            <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+           <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
+           <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
+           <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
         </ul>
       </li>
-       <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
-    </ul>
-    </nav>
+      <li><a>SHOP</a>
+       <ul>
+           <li><a href="https://polywelle.base.shop">BASE</a></li>
+           <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+           <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+           <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+           <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+       </ul>
+     </li>
+      <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
+   </ul>
+   </nav>
 
-    <div id ="humMenu">
-        <input id ="humCheck" type ="checkbox">         <!-- idとclssの違い　idは一度のみ#　classは何度でも. -->
-        <label id ="humOpen" for="humCheck"><img src ="icon.png" alt ="メニュー" width="34" heught="28"></label>
-        <label id ="humClose" for="humCheck"></label>
-        <nav>
-         <ul class="innner">
-            <li><a href="https://polywelle.github.io">HOME</a></li>
-            <li><u>PRODUCT</u></li>
-             <ul class="submenu">
-                <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
-                <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
-                <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
-             </ul>
-            <li><u>SHOP</u></li>
-             <ul>
-                <li><a href="https://polywelle.base.shop">BASE</a></li>
-                <li><a href="https://minne.com/@136631isaisa">minne</a></li>
-                <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
-                <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
-                <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
-             </ul>
-            <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
-         </ul>
-         <ul clss="SNS">
-            <a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a>
-         </ul>
-        </nav>
-    </div>
+   <div id ="humMenu">
+       <input id ="humCheck" type ="checkbox">         <!-- idとclssの違い　idは一度のみ#　classは何度でも. -->
+       <label id ="humOpen" for="humCheck"><img src ="icon.png" alt ="メニュー" width="34" heught="28"></label>
+       <label id ="humClose" for="humCheck"></label>
+       <nav>
+        <ul class="innner">
+           <li><a href="https://polywelle.github.io">HOME</a></li>
+           <li><u>PRODUCT</u></li>
+            <ul class="submenu">
+               <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
+               <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
+               <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
+           </ul>
+           <li><u>SHOP</u></li>
+            <ul>
+               <li><a href="https://polywelle.base.shop">BASE</a></li>
+               <li><a href="https://minne.com/@136631isaisa">minne</a></li>
+               <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
+               <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
+               <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
+            </ul>
+           <li><a href="https://polywelle.github.io/profile.html">PROFILE</a></li>
+        </ul>
+        <div clss="SNS">
+           <a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a>
+           <a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a>
+        </div>
+       </nav>
+   </div>
 </header>
 
 
 
 
 <body>
-    
-    <h1>DESIGN</h1>
 
 
-    <div class='hineri'>
-        <p>・HINERI</p>
-        <img src ='HINERI.png' alt = "hineri">
-        <img src ='HINERI2.png' alt = "hineri2">
-    </div>
-
-    <div class='uroko'>
-        <p>・UROKO</p>
-        <img src ='UROKO.png' alt = "uroko">
-        <img src ='UROKO2.png' alt = "uroko2">
-    </div>
-
-    <div class='uneri'>
-        <p>・UNERI</p>
-        <img src ='UNERI.png' alt = "urneri">
-        <img src ='UNERI2.png' alt = "urneri2">
-    </div>
-
-    <div class='whip'>
-        <p>・Whipped Cream</p>
-        <img src ='whipped.png' alt = "whip">
-        <img src ='whipped2.png' alt = "whip2">
-    </div>
-
-    <div class='wave'>
-        <p>・WAVE</p>
-        <img src ='wave.png' alt = "wave">
-        <img src ='wave2.png' alt = "wave2">
-    </div>
+    <ul class="timeline">
+        <li>
+          <p class="timeline-date">2014年</p>
+          <div class="timeline-content">
+            <h3>旭川工業高等専門学校物質化学専攻卒業</h3>
+            <p></p>
+          </div>
+        </li>
 
 
-    <h1>SIZE</h1>
+        <li>
+            <p class="timeline-date">2016年</p>
+            <div class="timeline-content">
+              <h3>名古屋工業大学工学部生命・応用化学科卒業</h3>
+              <p><u>Kawarazaki, I.</u>; Takasu, A.*</p>      <!-- uはアンダーバー -->
+              <p class="report"><a href= "https://onlinelibrary.wiley.com/doi/full/10.1002/macp.201600277" target="_blank">Synthesis of Unsaturated Non-Ionic Poly(ester-sulfones) via Acyclic Diene Metathesis (ADMET) Polymerization and Anode-Selective Electrophoretic Deposition</p></a>
+              <p>Macromolecular Chemistry and Physics 2016, 217(23), 2595-2600.</p>
+            </div>
+          </li>
+        
 
-    <div class='size'>
-        <p>・2号</p>
-        <p>・3号</p>
-    </div>
-    <div class="size2">
-        <img src ='3号サイズ.jpg' alt = "3号サイズ">
-        <img src ='2号サイズ.jpg' alt = "2号サイズ">
-    </div>
-
-
-    <h1>VARIETY</h1>
-
-    <div class='normal'>
-        <p><u>Standard</u></p>
-        <li>底穴がないため、持ち運びが容易</li>
-        <li>底穴を空けることで植木鉢としても利用可能</li>
-    </div>
-    <div class="normal2">
-        <img src ='normal.jpg' alt = "normal">
-    </div>
+          <li>
+            <p class="timeline-date">2018年</p>
+            <div class="timeline-content">
+              <h3>名古屋工業大学工学研究科生命・応用化学専攻博士前期課程修了</h3>
+              <p>Hayashi, M.*; Shibata, K.; <u>Kawarazaki, I.</u>; Takasu, A.*</p>      
+              <p class="report"><a href= "https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/slct.201904104" target="_blank">Simple Strategy for Dual Control of Crystallization and Thermal Property on Polyesters by Dispersing Metal Salts Via Multiple Coordination Bonds</p></a>
+              <p>Macromolecular Chemistry and Physics 2018, 219(15), 1800127.</p>
+            </div>
+          </li>
 
 
-    <div class='functional'>
-        <p><u>Evolution</u></p>
-        <li>水やり後に植木鉢カバーから水を捨てる手間を削減</li>
-        <li>幾何学模様の底穴により排水性が向上</li>
-        <li>受け皿に支柱がついていることで根腐れを防止でき、水が乾燥しやすい</li>
-    </div>
-    <div class="functional2">
-        <img src ='functional.jpg' alt = "functional">
-    </div>
+          <li>
+            <p class="timeline-date">2021年</p>
+            <div class="timeline-content">
+              <h3>名古屋工業大学工学研究科生命・応用化学専攻博士後課程修了</h3>
+              <p><u>Kawarazaki, I.</u>; Hayashi, M.*; Yamamoto, K.; Takasu, A.</p>      
+              <p class="report"><a href= "https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/slct.201904104" target="_blank">Quick and efficient thermal stability enhancement of micro-phase separated structure formed from ABA triblock copolymers by photo cross-linking approach</p></a>
+              <p>ChemistrySelect  2020, 5(9), 2842.</p>
+
+            
+                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*; Takasu, A.</p>       <!-- 余白の導入 -->
+                <p class="report"><a href= "https://www.sciencedirect.com/science/article/abs/pii/S0032386121008582" target="_blank">Extraction of intrinsic cross-linking effects of A hard domains on segmental motion of B soft block for ABA triblock copolymer-based elastomers by utilizing photo cross-linking</p></a>
+                <p>Polymer  2020, 192(27), 122343.</p>
+
+            
+                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*</p>       
+                <p class="report"><a href= "https://pubs.acs.org/doi/10.1021/acsapm.1c00026" target="_blank">Enhancement of Mechanical Properties of ABA Triblock Copolymer-Based Elastomers by Incorporating Partial Cross-Links on the Soft Bridge Chains</p></a>
+                <p>ACS Applied Polymer Materials, 2021, 3(3), 1271-127</p>
+            
+
+            
+                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*</p>       
+                <p class="report"><a href= "https://linkinghub.elsevier.com/retrieve/pii/S0032386121004912" target="_blank">Importance of Interfacial Mixed Layer to Determine the Middle block Tg in Lamellar Structures of Uncross-linked and Cross-linked hard-b-Soft-b-hard Triblock Copolymers Polymer</p></a>
+                <p>Polymer, 2021, 227(16), 123868.</p>
+            
+
+            
+                <p class="margin">Sugimoto, K.; Hayashi, M.*; <u>Kawarazaki, I.</u>; Ito, S.</p>       
+                <p class="report"><a href= "https://www.sciencedirect.com/science/article/abs/pii/S0032386121007126" target="_blank">Versatile Tensile and Fracture Behaviors of Dual Cross-linked Elastomers by Postpreparation Photo Tuning of Local Cross-link Density Polymer</p></a>
+                <p>Polymer, 2021, 230(16), 124089.</p>
+            
+
+            
+                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*; Shibata, A.; Kaai, M.</p>       
+                <p class="report"><a href= "https://www.sciencedirect.com/science/article/abs/pii/S0032386121008582" target="_blank">Extraction of intrinsic effects of glassy domain cross-linking on the tensile properties of ABA block copolymer elastomers via photo cross-linking approach</p></a>
+                <p>Polymer, 2021, 234(8), 124235.</p>
+            
 
 
-    
+          <li>
+            <p class="timeline-date">2021年~</p>
+            <div class="timeline-content">
+              <h3>メーカーで研究職として勤務</h3>
+              <p>滋賀県在中</p>      
+              <p class="last-margin">3Dプリントショップ「Polywelle」</p>
+            </div>
+          </li>
+
+      </ul>
 
 
-    <!-- フェードイン用のコードです -->
-    <script>
-        $(function(){
-            $(window).on('load scroll', function() {        /* ロードした時とスクロールした時に処理を実行 */
-                $(".show").each(function() {                    /* showクラスを発見する度に処理を実行 */
-                    var winScroll = $(window).scrollTop();      /* スクロール量を取得して変数に入れる */
-                    var winHeight = $(window).height();         /* ウィンドウの高さを取得して変数に入れる */
-                    var scrollPos = winScroll + (winHeight * 0.9);      /* 要素がウィンドウのどの位置まで来たら処理を開始するか */
-                    if($(this).offset().top < scrollPos) {                  /* 要素がウィンドウの指定した位置まで来たらCSSを調整 */
-                        $(this).css({opacity: 1, transform: 'translate(0, 0)'});    /* 実行されると透明度1,元の位置に変化 */
-                    }
-                });
-            });
-        });
-    </script>
-
-
-    
 </body>
 </html>
