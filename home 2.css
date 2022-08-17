@@ -239,6 +239,20 @@ font-family: 'Noto Sans JP', sans-serif;
             color: rgb(250, 248, 248);
             background-color: rgb(68, 66, 63);
             }
+    
+
+    .wrap6 {
+        display: flex;
+        }
+        
+    
+    .flowbtn10 {     /* SNSアイコン */
+        font-size:35px;
+        transition:.5s;
+        color:#444;
+        margin-left: 15%;
+        margin-bottom: 400px;
+        }
         
 }
 
@@ -495,6 +509,20 @@ font-family: 'Noto Sans JP', sans-serif;
             opacity: 1;
             padding-top:2%;
             }
+
+    
+    .wrap6 {
+        display: flex;
+        }
+        
+    
+    .flowbtn10 {     /* SNSアイコン */
+        font-size:35px;
+        transition:.5s;
+        color:#444;
+        margin-left: 30%;
+        margin-bottom: 400px;
+        }
    
 
 
