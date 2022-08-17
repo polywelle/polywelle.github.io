@@ -111,7 +111,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
     .images img {
     width:100%;      
-    /* height:500px; */
+    height:500px;
     }
     
     .title {
@@ -144,7 +144,7 @@ font-family: 'Noto Sans JP', sans-serif;
         }
     
         .wrap2 img {
-        min-width: 400px;
+        /* min-width: 400px; */
         width: 100%;
         position: relative;     /* positionがないとzindex効かない */
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
