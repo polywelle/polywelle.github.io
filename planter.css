@@ -1,172 +1,531 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <meta charset="utf-8">  <!-- 文字エンコードの指定。簡単に言うと文字化けを防ぐための記述。 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ページを様々な画面幅のデバイスでの表示に適応させるための記述。 -->
-    <title>ホーム画面</title>
+@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="planter.css">         <!-- cssファイルとの結びつけ -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">      <!-- google fonts -->
+p, li {
+font-family: 'Noto Sans JP', sans-serif;
+}
 
 
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>   <!-- iQueryアニメーション -->
+    @media (max-width : 799px){
 
-<script src="https://kit.fontawesome.com/7d7d05729d.js" crossorigin="anonymous"></script>       <!-- fontawesome snsアイコン -->
+    /* メニューバー */
+    ul.ddmenu {
+    display: none;
+    }
 
-<meta name="format-detection" content="telephone=no">   <!-- 携帯番号リンクつけない -->
+    #humMenu {
+        padding: 12px;
+        position: fixed;
+        z-index: 20;
+    }
 
-</head>
+    #humCheck, #humClose {display: none;}
+    #humOpen {
+        display: block;             /* ブロック要素にする */
+        width: 58px;
+        cursor: pointer;            /* マウスの矢印が変化する */
+    }
 
-<header>
-   <nav>
-    <ul class="ddmenu">
-       <li><a href="https://polywelle.github.io">HOME</a></li>
-       <li><a>PRODUCT</a>
-         <ul>
-            <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
-            <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
-            <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
-         </ul>
-       </li>
-       <li><a>SHOP</a>
-        <ul>
-            <li><a href="https://polywelle.base.shop">BASE</a></li>
-            <li><a href="https://minne.com/@136631isaisa">minne</a></li>
-            <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
-            <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
-            <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
-        </ul>
-      </li>
-       <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
-    </ul>
-    </nav>
+    #humOpen:hover {
+        opacity: 0.5;           /* 透明度 */
+    }
 
-    <div id ="humMenu">
-        <input id ="humCheck" type ="checkbox">         <!-- idとclssの違い　idは一度のみ#　classは何度でも. -->
-        <label id ="humOpen" for="humCheck"><img src ="icon.png" alt ="メニュー" width="34" heught="28"></label>
-        <label id ="humClose" for="humCheck"></label>
-        <nav>
-         <ul class="innner">
-            <li><a href="https://polywelle.github.io">HOME</a></li>
-            <li><u>PRODUCT</u></li>
-             <ul class="submenu">
-                <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
-                <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
-                <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
-             </ul>
-            <li><u>SHOP</u></li>
-             <ul>
-                <li><a href="https://polywelle.base.shop">BASE</a></li>
-                <li><a href="https://minne.com/@136631isaisa">minne</a></li>
-                <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
-                <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
-                <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
-             </ul>
-            <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
-         </ul>
-         <ul clss="SNS">
-            <a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a>
-         </ul>
-        </nav>
-    </div>
-</header>
+    #humOpen img {display: block;}
+    #humClose, nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
 
+    #humClose {             /* クリック後の背景画面 */
+        z-index: 2;
+        width: 100%;
+        background: rgb(148, 146, 146);
+        opacity: 0.8;
+        transition: 0.5s;           /* アニメーションタイム */
+    }
 
+    nav{                /* クリック後のメイン画面 */
+        z-index: 3;
+        width: 330px;
+        background: rgb(218, 218, 218);
+        transition: 0.5s;
+        transform: translateX(-100%);
+    }
 
+    #humCheck:checked ~ #humClose {display: block;}         /* もう一度押すとメニューが閉じる */
+    #humCheck:checked ~ nav {
+        transform: translateX(0);
+    }
 
-<body>
-    
-    <h1>DESIGN</h1>
+    nav ul {
+        overflow: hidden;
+        list-style: none;
+        font-size: 20px;
+    }
 
+    nav li {
+        padding: 8px 0;
+        margin: 0px 0;
+    }
 
-    <div class='hineri'>
-        <p>・HINERI</p>
-        <img src ='HINERI.png' alt = "hineri">
-        <img src ='HINERI2.png' alt = "hineri2">
-    </div>
+    nav li a:hover {
+        color: #e04b4b;
+    }
 
-    <div class='uroko'>
-        <p>・UROKO</p>
-        <img src ='UROKO.png' alt = "uroko">
-        <img src ='UROKO2.png' alt = "uroko2">
-    </div>
-
-    <div class='uneri'>
-        <p>・UNERI</p>
-        <img src ='UNERI.png' alt = "urneri">
-        <img src ='UNERI2.png' alt = "urneri2">
-    </div>
-
-    <div class='whip'>
-        <p>・Whipped Cream</p>
-        <img src ='Whipped.png' alt = "whip">
-        <img src ='Whipped2.png' alt = "whip2">
-    </div>
-
-    <div class='wave'>
-        <p>・WAVE</p>
-        <img src ='wave.png' alt = "wave">
-        <img src ='wave2.png' alt = "wave2">
-    </div>
-
-
-    <h1>SIZE</h1>
-
-    <div class='size'>
-        <p>・2号</p>
-        <p>・3号</p>
-    </div>
-    <div class="size2">
-        <img src ='3号サイズ.jpg' alt = "3号サイズ">
-        <img src ='2号サイズ.jpg' alt = "2号サイズ">
-    </div>
-
-
-    <h1>VARIETY</h1>
-
-    <div class='normal'>
-        <p><u>Standard</u></p>
-        <li>底穴がないため、持ち運びが容易</li>
-        <li>底穴を空けることで植木鉢としても利用可能</li>
-    </div>
-    <div class="normal2">
-        <img src ='normal.jpg' alt = "normal">
-    </div>
-
-
-    <div class='functional'>
-        <p><u>Evolution</u></p>
-        <li>水やり後に植木鉢カバーから水を捨てる手間を削減</li>
-        <li>幾何学模様の底穴により排水性が向上</li>
-        <li>受け皿に支柱がついていることで根腐れを防止でき、水が乾燥しやすい</li>
-    </div>
-    <div class="functional2">
-        <img src ='functional.jpg' alt = "functional">
-    </div>
-
+    nav li a {
+        font-size: 20px;
+        text-decoration: none;
+        color:black;
+    }
 
     
 
+    .SNS {
+        display: flex;
+        margin-left:10px;
+        }
+        
+    
+        .flowbtn10{     /* SNSアイコン */
+            font-size:35px;
+            transition:.5s;
+            color:#444;	
+            padding-left: 30px;
+            }
 
-    <!-- フェードイン用のコードです -->
-    <script>
-        $(function(){
-            $(window).on('load scroll', function() {        /* ロードした時とスクロールした時に処理を実行 */
-                $(".show").each(function() {                    /* showクラスを発見する度に処理を実行 */
-                    var winScroll = $(window).scrollTop();      /* スクロール量を取得して変数に入れる */
-                    var winHeight = $(window).height();         /* ウィンドウの高さを取得して変数に入れる */
-                    var scrollPos = winScroll + (winHeight * 0.9);      /* 要素がウィンドウのどの位置まで来たら処理を開始するか */
-                    if($(this).offset().top < scrollPos) {                  /* 要素がウィンドウの指定した位置まで来たらCSSを調整 */
-                        $(this).css({opacity: 1, transform: 'translate(0, 0)'});    /* 実行されると透明度1,元の位置に変化 */
-                    }
-                });
-            });
-        });
-    </script>
+   
+
+
+    /* 全体の背景色 */
+    body{                                   
+        background-color: #a09c9c;
+    }
+    
+
+   h1 {
+    padding: 100px 0 0 5%;
+    color:rgb(248, 4, 4);
+    font-size: 3.5vw;
+    }
+
+    .hineri {
+    display: flex;
+    margin: 50px 5% 0 5%;
+    }
+
+    .hineri p {
+    float: left;
+    padding-right: 10%;
+    padding-left: 0%;
+    font-size: 3vw;
+    }
+
+    .hineri img {
+    width: 35%;
+    padding: 1%;
+    }
+
+
+    .uroko {
+        display: flex;
+        margin: 50px 5% 0 5%;
+        }
+    
+        .uroko p {
+        float: left;
+        padding-right: 9.5%;
+        padding-left: 0%;
+        font-size: 3vw;
+        }
+    
+        .uroko img {
+        width: 35%;
+        padding: 1%;
+        }
+
+
+    .uneri {
+        display: flex;
+        margin: 50px 5% 0 5%;
+        }
+    
+        .uneri p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 0%;
+        font-size: 3vw;
+        }
+    
+        .uneri img {
+        width: 35%;
+        padding: 1%;
+        }
+
+    
+    .whip {
+        display: flex;
+        margin: 50px 5% 0 5%;
+        }
+    
+        .whip p {
+        float: left;
+        padding-right: 2%;
+        padding-left: 0%;
+        font-size: 3vw;
+        }
+    
+        .whip img {
+        width: 35%;
+        padding: 1%;
+        }
+
+
+    .wave {
+        display: flex;
+        margin: 50px 5% 0 5%;
+        }
+    
+        .wave p {
+        float: left;
+        padding-right: 7%;
+        padding-left: 0%;
+        font-size: 3vw;
+        }
+    
+        .wave img {
+        width: 35%;
+        padding: 1%;
+        }
+    
+
+    .size {
+        margin: 50px 0% 0 5%;
+        display: flex;
+        }
+    
+        .size p {
+        padding-right: 37%;
+        font-size: 3vw;
+        }
+    
+    .size2 {
+        display: flex;
+        text-align: center;
+        margin-left: 5%;
+    }
+
+        .size2 img {
+        width: 40%;
+        padding: 1%;
+        margin-right: 5%;
+        }
+    
+
+
+    .normal {
+        margin: 50px 5% 0 5%;
+        }
+    
+        .normal p {
+        font-size: 3vw;
+        }
+
+        .normal li {
+        font-size: 2.5vw;
+        }
+    
+    .normal2 {
+        margin-top: 20px;
+        margin-left: 5%;
+    }
+
+        .normal2 img {
+        width: 100%;
+        }
+    
+    
+    .functional {
+        margin: 50px 5% 0 5%;
+        }
+    
+        .functional p {
+        font-size: 3vw;
+        }
+
+        .functional li {
+        font-size: 2.5vw;
+        }
+    
+    .functional2 {
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-bottom: 25%;
+    }
+
+        .functional2 img {
+        width: 100%;
+        }
+
+    
+}
+
+
+
+@media (min-width : 800px){         /* 携帯750px */
+
+    /* メニューバー */
+    .ddmenu {
+    text-align: center;    
+    }
+
+    #humMenu {
+    display: none;
+    }
+
+    ul.ddmenu {
+        margin: 0px;
+        padding-top: 5px;
+        margin-left: 10%;
+        /* width: 1000px;
+        display: flex; */    /* 横並びに配置 */
+    }
+    
+    ul.ddmenu li {
+        list-style: none;       /* liタグの箇条書きの点を消す */
+        display: inline-block;   /* 横並びに配置 */
+        width: 24%;
+        position:relative;
+    }
+    ul.ddmenu a {
+        text-decoration: none;  /* リンクの下線を消す */
+        color: white;
+        font-weight: bold;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: block;         /* 項目内全域をリンク可能 */
+        line-height: 40px;
+        padding-right: 200px;
+    }
+    ul.ddmenu a:hover{
+        color: rgb(12, 12, 12);      /* マウスオーバー時の文字色 */
+    }
+
+    /* 通常時のサブメニュー */
+    ul.ddmenu ul{
+        display: none;      /* 標準では非表示 */
+        margin-top: 0px;        /* 外側の余白0 */
+        padding: 0px;       /* 内側の余白0 */
+        position: absolute;
+        z-index: 1000;      /* 最前面に設定 */
+    }
+    ul.ddmenu li:hover ul{
+        display: block;     /* マウスが載っている間項目を表示 */
+        background-color: rgba(12, 12, 12, 0.3);        /* 最後の数字は透過度 */
+    }
+    
+    /* サブメニューの装飾 */
+    ul.ddmenu ul li {
+        width: 80%;
+        /* border-top: 1px solid rgb(156, 154, 154);  */      /* 横線 */
+    }
+    ul.ddmenu ul li a {
+        line-height: 35px;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-weight: normal;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    ul.ddmenu ul li a:hover {
+        color: #e04b4b;
+    }
+
+
+    body{                                   /* 全体の背景色 */
+        background-color: #a09c9c;
+    }
+    
+
+    h1 {
+    margin: 100px 0 0 5%;
+    color:rgb(248, 4, 4);
+    font-size: 2.5vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    }
+
+
+    .hineri {
+    display: flex;
+    margin: 100px 5% 0 5%;
+    }
+
+    .hineri p {
+    float: left;
+    padding-right: 10%;
+    padding-left: 5%;
+    font-size: 2vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .hineri img {
+    width: 30%;
+    padding: 1%;
+    }
+
+
+    .uroko {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .uroko p {
+        float: left;
+        padding-right: 9.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .uroko img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+    .uneri {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .uneri p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .uneri img {
+        width: 30%;
+        padding: 1%;
+        }
+
+    
+    .whip {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .whip p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .whip img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+    .wave {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .wave p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .wave img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+
+
+    .size {
+        margin: 50px 5% 0 15%;
+        display: flex;
+        }
+    
+        .size p {
+        padding-right: 35.5%;
+        font-size: 2vw;
+        }
+    
+    .size2 {
+        display: flex;
+        text-align: center;
+        margin-left: 15%;
+    }
+
+        .size2 img {
+        width: 35%;
+        padding: 1%;
+        margin-right: 5%;
+        }
+    
+
+    .normal {
+        margin: 50px 5% 0 10%;
+        }
+    
+        .normal p {
+        font-size: 2vw;
+        }
+
+        .normal li {
+        font-size: 1.5vw;
+        }
+    
+    .normal2 {
+        margin-top: 20px;
+        margin-left: 10%;
+    }
+
+        .normal2 img {
+        width: 90%;
+        }
+    
+    
+    .functional {
+        margin: 100px 5% 0 10%;
+        }
+    
+        .functional p {
+        font-size: 2vw;
+        }
+
+        .functional li {
+        font-size: 1.5vw;
+        }
+    
+    .functional2 {
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-bottom: 20%;
+    }
+
+        .functional2 img {
+        width: 90%;
+        }
+
 
 
     
-</body>
-</html>
+
+/* 下からフェードイン */
+.slide-bottom {
+	opacity: 0;                             /* アニメーションが実行される前の状態　要素の透明度が0 */
+	transform: translate(0, 20px);          /* 要素の上下左右の調整　左右が0下20pxから */
+	transition: all 2s 0s ease-out;        /* 全てを対象、変化の時間、待機時間、ゆっくり終わる */
+ }
+
+}
