@@ -111,7 +111,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
     .images img {
     width:100%;      
-    height:500px;
+    height:350px;
     }
     
     .title {
@@ -139,12 +139,11 @@ font-family: 'Noto Sans JP', sans-serif;
     /* 植木鉢カバー */
     .wrap2 {
         position: relative;       /* imgではposition効かないため */
-        margin: 100px 10% 0 10%;
+        margin: 100px 5% 0 5%;
         text-align: center;
         }
     
         .wrap2 img {
-        /* min-width: 400px; */
         width: 100%;
         position: relative;     /* positionがないとzindex効かない */
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
@@ -166,12 +165,11 @@ font-family: 'Noto Sans JP', sans-serif;
     /* 試験管花瓶 */
     .wrap3 {
         position: relative;       /* imgではposition効かないため */
-        margin: 100px 10% 0 10%;
+        margin: 100px 5% 0 5%;
         text-align: center;
         }
     
         .wrap3 img {
-        min-width: 400px;
         width: 100%;
         position: relative;     /* positionがないとzindex効かない */
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
@@ -193,12 +191,11 @@ font-family: 'Noto Sans JP', sans-serif;
     /* 生活品 */
     .wrap4 {
         position: relative;       /* imgではposition効かないため */
-        margin: 100px 10% 0 10%;
+        margin: 100px 5% 0 5%;
         text-align: center;
         }
     
         .wrap4 img {
-        min-width: 400px;
         width: 100%;
         position: relative;     /* positionがないとzindex効かない */
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
@@ -220,13 +217,12 @@ font-family: 'Noto Sans JP', sans-serif;
         /*Fullcontrol */      
         .wrap5 {
         position: relative;       /* imgではposition効かないため */
-        margin: 100px 10% 0 10%;
+        margin: 100px 5% 0 5%;
         text-align: center;
         margin-bottom: 20%;
         }
     
         .wrap5 img {
-        min-width: 400px;
         width: 100%;
         position: relative;     /* positionがないとzindex効かない */
         box-shadow: 5px 5px 10px gray;          /* 影　右下ぼかし色 */
