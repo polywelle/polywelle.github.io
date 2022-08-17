@@ -7,7 +7,7 @@ p, li, h2 {
 font-family: 'Noto Sans JP', sans-serif;
 }
 
-    @media (max-width : 799px){
+    @media (max-width : 649px){
 
     /* メニューバー */
     ul.ddmenu {
@@ -254,7 +254,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
 
 
-@media (min-width : 800px){         /* 携帯750px */
+@media (min-width : 650px){         /* 携帯750px */
 
     /* メニューバー */
     .ddmenu {
