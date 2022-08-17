@@ -1,0 +1,525 @@
+@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
+
+p, li {
+font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+    @media (max-width : 799px){
+
+    /* メニューバー */
+    ul.ddmenu {
+    display: none;
+    }
+
+    #humMenu {
+        padding: 12px;
+        position: fixed;
+        z-index: 20;
+    }
+
+    #humCheck, #humClose {display: none;}
+    #humOpen {
+        display: block;             /* ブロック要素にする */
+        width: 58px;
+        cursor: pointer;            /* マウスの矢印が変化する */
+    }
+
+    #humOpen:hover {
+        opacity: 0.5;           /* 透明度 */
+    }
+
+    #humOpen img {display: block;}
+    #humClose, nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    #humClose {             /* クリック後の背景画面 */
+        z-index: 2;
+        width: 100%;
+        background: rgb(148, 146, 146);
+        opacity: 0.8;
+        transition: 0.5s;           /* アニメーションタイム */
+    }
+
+    nav{                /* クリック後のメイン画面 */
+        z-index: 3;
+        width: 330px;
+        background: rgb(218, 218, 218);
+        transition: 0.5s;
+        transform: translateX(-100%);
+    }
+
+    #humCheck:checked ~ #humClose {display: block;}         /* もう一度押すとメニューが閉じる */
+    #humCheck:checked ~ nav {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        overflow: hidden;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    nav li {
+        padding: 8px 0;
+        margin: 0px 0;
+    }
+
+    nav li a:hover {
+        color: #e04b4b;
+    }
+
+    nav li a {
+        font-size: 20px;
+        text-decoration: none;
+        color:black;
+    }
+
+    
+
+    .flowbtn10{     /* SNSアイコン */
+        font-size:35px;
+        text-decoration:none;
+        transition:.5s;
+        color:#444;	
+        }
+
+   
+
+
+    /* 全体の背景色 */
+    body{                                   
+        background-color: #a09c9c;
+    }
+    
+
+   h1 {
+    padding: 100px 0 0 5%;
+    color:rgb(248, 4, 4);
+    font-size: 3.5vw;
+    }
+
+    .hineri {
+    display: flex;
+    margin: 100px 5% 0 5%;
+    }
+
+    .hineri p {
+    float: left;
+    padding-right: 10%;
+    padding-left: 5%;
+    font-size: 3vw;
+    }
+
+    .hineri img {
+    width: 30%;
+    padding: 1%;
+    }
+
+
+    .uroko {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .uroko p {
+        float: left;
+        padding-right: 9.5%;
+        padding-left: 5%;
+        font-size: 3vw;
+        }
+    
+        .uroko img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+    .uneri {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .uneri p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 3vw;
+        }
+    
+        .uneri img {
+        width: 30%;
+        padding: 1%;
+        }
+
+    
+    .whip {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .whip p {
+        float: left;
+        padding-right: 2%;
+        padding-left: 5%;
+        font-size: 3vw;
+        }
+    
+        .whip img {
+        width: 30%;
+        padding: 0;
+        }
+
+
+    .wave {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .wave p {
+        float: left;
+        padding-right: 7%;
+        padding-left: 5%;
+        font-size: 3vw;
+        }
+    
+        .wave img {
+        width: 30%;
+        padding: 1%;
+        }
+    
+
+    .size {
+        margin: 50px 5% 0 15%;
+        display: flex;
+        }
+    
+        .size p {
+        padding-right: 20%;
+        font-size: 3vw;
+        }
+    
+    .size2 {
+        display: flex;
+        text-align: center;
+        margin-left: 15%;
+    }
+
+        .size2 img {
+        width: 35%;
+        padding: 1%;
+        margin-right: 5%;
+        }
+    
+
+
+    .normal {
+        margin: 50px 5% 0 5%;
+        }
+    
+        .normal p {
+        font-size: 3vw;
+        }
+
+        .normal li {
+        font-size: 2.5vw;
+        }
+    
+    .normal2 {
+        margin-top: 20px;
+        margin-left: 5%;
+    }
+
+        .normal2 img {
+        width: 100%;
+        }
+    
+    
+    .functional {
+        margin: 100px 5% 0 5%;
+        }
+    
+        .functional p {
+        font-size: 3vw;
+        }
+
+        .functional li {
+        font-size: 2.5vw;
+        }
+    
+    .functional2 {
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-bottom: 25%;
+    }
+
+        .functional2 img {
+        width: 100%;
+        }
+
+    
+}
+
+
+
+@media (min-width : 800px){         /* 携帯750px */
+
+    /* メニューバー */
+    .ddmenu {
+    text-align: center;    
+    }
+
+    #humMenu {
+    display: none;
+    }
+
+    ul.ddmenu {
+        margin: 0px;
+        padding-top: 5px;
+        margin-left: 10%;
+        /* width: 1000px;
+        display: flex; */    /* 横並びに配置 */
+    }
+    
+    ul.ddmenu li {
+        list-style: none;       /* liタグの箇条書きの点を消す */
+        display: inline-block;   /* 横並びに配置 */
+        width: 24%;
+        position:relative;
+    }
+    ul.ddmenu a {
+        text-decoration: none;  /* リンクの下線を消す */
+        color: white;
+        font-weight: bold;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: block;         /* 項目内全域をリンク可能 */
+        line-height: 40px;
+        padding-right: 200px;
+    }
+    ul.ddmenu a:hover{
+        color: rgb(12, 12, 12);      /* マウスオーバー時の文字色 */
+    }
+
+    /* 通常時のサブメニュー */
+    ul.ddmenu ul{
+        display: none;      /* 標準では非表示 */
+        margin-top: 0px;        /* 外側の余白0 */
+        padding: 0px;       /* 内側の余白0 */
+        position: absolute;
+        z-index: 1000;      /* 最前面に設定 */
+    }
+    ul.ddmenu li:hover ul{
+        display: block;     /* マウスが載っている間項目を表示 */
+        background-color: rgba(12, 12, 12, 0.3);        /* 最後の数字は透過度 */
+    }
+    
+    /* サブメニューの装飾 */
+    ul.ddmenu ul li {
+        width: 80%;
+        /* border-top: 1px solid rgb(156, 154, 154);  */      /* 横線 */
+    }
+    ul.ddmenu ul li a {
+        line-height: 35px;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-weight: normal;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    ul.ddmenu ul li a:hover {
+        color: #e04b4b;
+    }
+
+
+    body{                                   /* 全体の背景色 */
+        background-color: #a09c9c;
+    }
+    
+
+    h1 {
+    margin: 100px 0 0 5%;
+    color:rgb(248, 4, 4);
+    font-size: 2.5vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    }
+
+
+    .hineri {
+    display: flex;
+    margin: 100px 5% 0 5%;
+    }
+
+    .hineri p {
+    float: left;
+    padding-right: 10%;
+    padding-left: 5%;
+    font-size: 2vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .hineri img {
+    width: 30%;
+    padding: 1%;
+    }
+
+
+    .uroko {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .uroko p {
+        float: left;
+        padding-right: 9.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .uroko img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+    .uneri {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .uneri p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .uneri img {
+        width: 30%;
+        padding: 1%;
+        }
+
+    
+    .whip {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .whip p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .whip img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+    .wave {
+        display: flex;
+        margin: 100px 5% 0 5%;
+        }
+    
+        .wave p {
+        float: left;
+        padding-right: 10.5%;
+        padding-left: 5%;
+        font-size: 2vw;
+        }
+    
+        .wave img {
+        width: 30%;
+        padding: 1%;
+        }
+
+
+
+
+    .size {
+        margin: 50px 5% 0 15%;
+        display: flex;
+        }
+    
+        .size p {
+        padding-right: 35.5%;
+        font-size: 2vw;
+        }
+    
+    .size2 {
+        display: flex;
+        text-align: center;
+        margin-left: 15%;
+    }
+
+        .size2 img {
+        width: 35%;
+        padding: 1%;
+        margin-right: 5%;
+        }
+    
+
+    .normal {
+        margin: 50px 5% 0 10%;
+        }
+    
+        .normal p {
+        font-size: 2vw;
+        }
+
+        .normal li {
+        font-size: 1.5vw;
+        }
+    
+    .normal2 {
+        margin-top: 20px;
+        margin-left: 10%;
+    }
+
+        .normal2 img {
+        width: 90%;
+        }
+    
+    
+    .functional {
+        margin: 100px 5% 0 10%;
+        }
+    
+        .functional p {
+        font-size: 2vw;
+        }
+
+        .functional li {
+        font-size: 1.5vw;
+        }
+    
+    .functional2 {
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-bottom: 20%;
+    }
+
+        .functional2 img {
+        width: 90%;
+        }
+
+
+
+    
+
+/* 下からフェードイン */
+.slide-bottom {
+	opacity: 0;                             /* アニメーションが実行される前の状態　要素の透明度が0 */
+	transform: translate(0, 20px);          /* 要素の上下左右の調整　左右が0下20pxから */
+	transition: all 2s 0s ease-out;        /* 全てを対象、変化の時間、待機時間、ゆっくり終わる */
+ }
+
+}
