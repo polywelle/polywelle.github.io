@@ -1,165 +1,337 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <meta charset="utf-8">  <!-- 文字エンコードの指定。簡単に言うと文字化けを防ぐための記述。 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ページを様々な画面幅のデバイスでの表示に適応させるための記述。 -->
-    <title>ホーム画面</title>
+@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="profile.css">         <!-- cssファイルとの結びつけ -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
-
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-
-<script src="https://kit.fontawesome.com/7d7d05729d.js" crossorigin="anonymous"></script>       <!-- fontawesome snsアイコン -->
-
-<meta name="format-detection" content="telephone=no">       <!-- 携帯で電話番号リンクさせない -->
-
-</head>
+h1, p, li {
+font-family: 'Noto Sans JP', sans-serif;
+}
 
 
-<header>
-  <nav>
-    <ul class="ddmenu">
-      <li><a href="https://polywelle.github.io">HOME</a></li>
-      <li><a>PRODUCT</a>
-        <ul>
-           <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
-           <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
-           <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
-        </ul>
-      </li>
-      <li><a>SHOP</a>
-       <ul>
-           <li><a href="https://polywelle.base.shop">BASE</a></li>
-           <li><a href="https://minne.com/@136631isaisa">minne</a></li>
-           <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
-           <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
-           <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
-       </ul>
-     </li>
-      <li><a href="https://polywelle.github.io/profile">PROFILE</a></li>
-   </ul>
-   </nav>
+    @media (max-width : 799px){
 
-   <div id ="humMenu">
-       <input id ="humCheck" type ="checkbox">         <!-- idとclssの違い　idは一度のみ#　classは何度でも. -->
-       <label id ="humOpen" for="humCheck"><img src ="icon.png" alt ="メニュー" width="34" heught="28"></label>
-       <label id ="humClose" for="humCheck"></label>
-       <nav>
-        <ul class="innner">
-           <li><a href="https://polywelle.github.io">HOME</a></li>
-           <li><u>PRODUCT</u></li>
-            <ul class="submenu">
-               <li><a href="https://polywelle.github.io/planter">植木鉢カバー</a></li>
-               <li><a href="https://polywelle.github.io/vase">一輪挿し</a></li>
-               <li><a href="https://polywelle.github.io/life">生活品カバー</a></li>
-           </ul>
-           <li><u>SHOP</u></li>
-            <ul>
-               <li><a href="https://polywelle.base.shop">BASE</a></li>
-               <li><a href="https://minne.com/@136631isaisa">minne</a></li>
-               <li><a href="https://www.creema.jp/c/polywelle">Creema</a></li>
-               <li><a href="https://fril.jp/shop/a8612a7e1af1d4984f69d937eaa6284d">Rakuma</a></li>
-               <li><a href="https://www.mercari.com/jp/u/761493794/">mercari</a></li>
-            </ul>
-           <li><a href="https://polywelle.github.io/profile.html">PROFILE</a></li>
-        </ul>
-        <div clss="SNS">
-           <a href="https://twitter.com/136631isaisa" class="flowbtn10"><i class="fab fa-twitter"></i></a>
-           <a href="https://www.instagram.com/isamu_3dp/" class="flowbtn10"><i class="fab fa-instagram"></i></a>
-        </div>
-       </nav>
-   </div>
-</header>
+    /* メニューバー */
+    ul.ddmenu {
+    display: none;
+    }
 
+    #humMenu {
+        padding: 12px;
+        position: fixed;
+        z-index: 20;
+    }
 
+    #humCheck, #humClose {display: none;}
+    #humOpen {
+        display: block;             /* ブロック要素にする */
+        width: 58px;
+        cursor: pointer;            /* マウスの矢印が変化する */
+    }
 
+    #humOpen:hover {
+        opacity: 0.5;           /* 透明度 */
+    }
 
-<body>
+    #humOpen img {display: block;}
+    #humClose, nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
 
+    #humClose {             /* クリック後の背景画面 */
+        z-index: 2;
+        width: 100%;
+        background: rgb(148, 146, 146);
+        opacity: 0.8;
+        transition: 0.5s;           /* アニメーションタイム */
+    }
 
-    <ul class="timeline">
-        <li>
-          <p class="timeline-date">2014年</p>
-          <div class="timeline-content">
-            <h3>旭川工業高等専門学校物質化学専攻卒業</h3>
-            <p></p>
-          </div>
-        </li>
+    nav{                /* クリック後のメイン画面 */
+        z-index: 3;
+        width: 330px;
+        background: rgb(218, 218, 218);
+        transition: 0.5s;
+        transform: translateX(-100%);
+    }
 
+    #humCheck:checked ~ #humClose {display: block;}         /* もう一度押すとメニューが閉じる */
+    #humCheck:checked ~ nav {
+        transform: translateX(0);
+    }
 
-        <li>
-            <p class="timeline-date">2016年</p>
-            <div class="timeline-content">
-              <h3>名古屋工業大学工学部生命・応用化学科卒業</h3>
-              <p><u>Kawarazaki, I.</u>; Takasu, A.*</p>      <!-- uはアンダーバー -->
-              <p class="report"><a href= "https://onlinelibrary.wiley.com/doi/full/10.1002/macp.201600277" target="_blank">Synthesis of Unsaturated Non-Ionic Poly(ester-sulfones) via Acyclic Diene Metathesis (ADMET) Polymerization and Anode-Selective Electrophoretic Deposition</p></a>
-              <p>Macromolecular Chemistry and Physics 2016, 217(23), 2595-2600.</p>
-            </div>
-          </li>
+    nav ul {
+        overflow: hidden;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    nav li {
+        padding: 8px 0;
+        margin: 0px 0;
+    }
+
+    nav li a:hover {
+        color: #e04b4b;
+    }
+
+    nav li a {
+        font-size: 20px;
+        text-decoration: none;
+        color:black;
+    }
+
+    
+
+    .SNS {
+        display: flex;
+        margin-left:10px;
+        }
         
+    
+        .flowbtn10{     /* SNSアイコン */
+            font-size:35px;
+            transition:.5s;
+            color:#444;	
+            padding-left: 30px;
+            }
 
-          <li>
-            <p class="timeline-date">2018年</p>
-            <div class="timeline-content">
-              <h3>名古屋工業大学工学研究科生命・応用化学専攻博士前期課程修了</h3>
-              <p>Hayashi, M.*; Shibata, K.; <u>Kawarazaki, I.</u>; Takasu, A.*</p>      
-              <p class="report"><a href= "https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/slct.201904104" target="_blank">Simple Strategy for Dual Control of Crystallization and Thermal Property on Polyesters by Dispersing Metal Salts Via Multiple Coordination Bonds</p></a>
-              <p>Macromolecular Chemistry and Physics 2018, 219(15), 1800127.</p>
-            </div>
-          </li>
-
-
-          <li>
-            <p class="timeline-date">2021年</p>
-            <div class="timeline-content">
-              <h3>名古屋工業大学工学研究科生命・応用化学専攻博士後課程修了</h3>
-              <p><u>Kawarazaki, I.</u>; Hayashi, M.*; Yamamoto, K.; Takasu, A.</p>      
-              <p class="report"><a href= "https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/slct.201904104" target="_blank">Quick and efficient thermal stability enhancement of micro-phase separated structure formed from ABA triblock copolymers by photo cross-linking approach</p></a>
-              <p>ChemistrySelect  2020, 5(9), 2842.</p>
-
-            
-                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*; Takasu, A.</p>       <!-- 余白の導入 -->
-                <p class="report"><a href= "https://www.sciencedirect.com/science/article/abs/pii/S0032386121008582" target="_blank">Extraction of intrinsic cross-linking effects of A hard domains on segmental motion of B soft block for ABA triblock copolymer-based elastomers by utilizing photo cross-linking</p></a>
-                <p>Polymer  2020, 192(27), 122343.</p>
-
-            
-                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*</p>       
-                <p class="report"><a href= "https://pubs.acs.org/doi/10.1021/acsapm.1c00026" target="_blank">Enhancement of Mechanical Properties of ABA Triblock Copolymer-Based Elastomers by Incorporating Partial Cross-Links on the Soft Bridge Chains</p></a>
-                <p>ACS Applied Polymer Materials, 2021, 3(3), 1271-127</p>
-            
-
-            
-                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*</p>       
-                <p class="report"><a href= "https://linkinghub.elsevier.com/retrieve/pii/S0032386121004912" target="_blank">Importance of Interfacial Mixed Layer to Determine the Middle block Tg in Lamellar Structures of Uncross-linked and Cross-linked hard-b-Soft-b-hard Triblock Copolymers Polymer</p></a>
-                <p>Polymer, 2021, 227(16), 123868.</p>
-            
-
-            
-                <p class="margin">Sugimoto, K.; Hayashi, M.*; <u>Kawarazaki, I.</u>; Ito, S.</p>       
-                <p class="report"><a href= "https://www.sciencedirect.com/science/article/abs/pii/S0032386121007126" target="_blank">Versatile Tensile and Fracture Behaviors of Dual Cross-linked Elastomers by Postpreparation Photo Tuning of Local Cross-link Density Polymer</p></a>
-                <p>Polymer, 2021, 230(16), 124089.</p>
-            
-
-            
-                <p class="margin"><u>Kawarazaki, I.</u>; Hayashi, M.*; Shibata, A.; Kaai, M.</p>       
-                <p class="report"><a href= "https://www.sciencedirect.com/science/article/abs/pii/S0032386121008582" target="_blank">Extraction of intrinsic effects of glassy domain cross-linking on the tensile properties of ABA block copolymer elastomers via photo cross-linking approach</p></a>
-                <p>Polymer, 2021, 234(8), 124235.</p>
-            
+   
 
 
-          <li>
-            <p class="timeline-date">2021年~</p>
-            <div class="timeline-content">
-              <h3>メーカーで研究職として勤務</h3>
-              <p>滋賀県在中</p>      
-              <p class="last-margin">3Dプリントショップ「Polywelle」</p>
-            </div>
-          </li>
+    /* 全体の背景色 */
+    body{                                   
+        background-color: #a09c9c;
+    }
+    
 
-      </ul>
+   h1 {
+    padding: 100px 0 0 5%;
+    color:rgb(248, 4, 4);
+    font-size: 3.5vw;
+    }
+
+    .paper_cup {
+        margin: 50px 5% 0 5%;
+        }
+    
+        .paper_cup p {
+        font-size: 2.5vw;
+        }
+    
+    .paper_cup2 {
+        padding-left: 5%;
+    }
+
+        .paper_cup2 img {
+        width: 100%;
+        }
+
+    .youtube {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        width:70%;
+        aspect-ratio:16/9;
+    }
 
 
-</body>
-</html>
+    .design {
+        margin: 50px 5% 0 10%;
+        }
+    
+        .design p {
+        font-size: 2.5vw;
+        }
+    
+    .design2 {
+        margin-left: 5%;
+    }
+
+        .design2 img {
+        width: 100%;
+        }
+
+    
+    .function {
+        margin: 50px 5% 0 10%;
+        }
+    
+        .function p {
+        font-size: 2.5vw;
+        }
+    
+    .function2 {
+        margin-left: 5%;
+        margin-bottom: 30%;
+    }
+
+        .function2 img {
+        width: 100%;
+        }
+    
+}
+
+
+
+@media (min-width : 800px){         /* 携帯750px */
+
+    /* メニューバー */
+    .ddmenu {
+    text-align: center;    
+    }
+
+    #humMenu {
+    display: none;
+    }
+
+    ul.ddmenu {
+        margin: 0px;
+        padding-top: 5px;
+        margin-left: 10%;
+        /* width: 1000px;
+        display: flex; */    /* 横並びに配置 */
+    }
+    
+    ul.ddmenu li {
+        list-style: none;       /* liタグの箇条書きの点を消す */
+        display: inline-block;   /* 横並びに配置 */
+        width: 24%;
+        position:relative;
+    }
+    ul.ddmenu a {
+        text-decoration: none;  /* リンクの下線を消す */
+        color: white;
+        font-weight: bold;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: block;         /* 項目内全域をリンク可能 */
+        line-height: 40px;
+        padding-right: 200px;
+    }
+    ul.ddmenu a:hover{
+        color: rgb(12, 12, 12);      /* マウスオーバー時の文字色 */
+    }
+
+    /* 通常時のサブメニュー */
+    ul.ddmenu ul{
+        display: none;      /* 標準では非表示 */
+        margin-top: 0px;        /* 外側の余白0 */
+        padding: 0px;       /* 内側の余白0 */
+        position: absolute;
+        z-index: 1000;      /* 最前面に設定 */
+    }
+    ul.ddmenu li:hover ul{
+        display: block;     /* マウスが載っている間項目を表示 */
+        background-color: rgba(12, 12, 12, 0.3);        /* 最後の数字は透過度 */
+    }
+    
+    /* サブメニューの装飾 */
+    ul.ddmenu ul li {
+        width: 80%;
+        /* border-top: 1px solid rgb(156, 154, 154);  */      /* 横線 */
+    }
+    ul.ddmenu ul li a {
+        line-height: 35px;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-weight: normal;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    ul.ddmenu ul li a:hover {
+        color: #e04b4b;
+    }
+
+
+    body{                                   /* 全体の背景色 */
+        background-color: #a09c9c;
+    }
+    
+
+    h1 {
+    margin: 100px 0 0 5%;
+    color:rgb(248, 4, 4);
+    font-size: 2.5vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    }
+
+
+    .paper_cup {
+        margin: 25px 5% 0 10%;
+        }
+    
+        .paper_cup p {
+        font-size: 1.5vw;
+        }
+    
+    .paper_cup2 {
+        margin-top: 20px;
+        margin-left: 15%;
+    }
+
+        .paper_cup2 img {
+        width: 90%;
+        }
+
+    .youtube {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        width:50%;
+        aspect-ratio:16/9;
+    }
+
+
+    .design {
+        margin: 25px 5% 0 10%;
+        }
+    
+        .design p {
+        font-size: 1.5vw;
+        }
+    
+    .design2 {
+        margin-top: 20px;
+        margin-left: 15%;
+    }
+
+        .design2 img {
+        width: 90%;
+        }
+
+    
+    .function {
+        margin: 50px 5% 0 10%;
+        }
+    
+        .function p {
+        font-size: 1.5vw;
+        }
+    
+    .function2 {
+        margin-top: 20px;
+        margin-left: 15%;
+        margin-bottom: 30%;
+    }
+
+        .function2 img {
+        width: 90%;
+        }
+
+
+
+    
+
+/* 下からフェードイン */
+.slide-bottom {
+	opacity: 0;                             /* アニメーションが実行される前の状態　要素の透明度が0 */
+	transform: translate(0, 20px);          /* 要素の上下左右の調整　左右が0下20pxから */
+	transition: all 2s 0s ease-out;        /* 全てを対象、変化の時間、待機時間、ゆっくり終わる */
+ }
+
+}
