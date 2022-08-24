@@ -114,7 +114,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
     .hineri {
     display: flex;
-    margin: 50px 5% 0 5%;
+    margin: 25px 5% 0 5%;
     }
 
     .hineri p {
@@ -203,7 +203,7 @@ font-family: 'Noto Sans JP', sans-serif;
     
 
     .size {
-        margin: 50px 0% 0 5%;
+        margin: 25px 0% 0 5%;
         display: flex;
         }
     
@@ -227,7 +227,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
 
     .normal {
-        margin: 50px 5% 0 5%;
+        margin: 25px 5% 0 5%;
         }
     
         .normal p {
@@ -249,7 +249,7 @@ font-family: 'Noto Sans JP', sans-serif;
     
     
     .functional {
-        margin: 50px 5% 0 5%;
+        margin: 25px 5% 0 5%;
         }
     
         .functional p {
