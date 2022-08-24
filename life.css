@@ -3,7 +3,7 @@
 	box-sizing: border-box;
 }
 
-p, li {
+h1, p, li {
 font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -260,7 +260,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
 
     .paper_cup {
-        margin: 50px 5% 0 10%;
+        margin: 25px 5% 0 10%;
         }
     
         .paper_cup p {
@@ -288,7 +288,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
 
     .design {
-        margin: 50px 5% 0 10%;
+        margin: 25px 5% 0 10%;
         }
     
         .design p {
