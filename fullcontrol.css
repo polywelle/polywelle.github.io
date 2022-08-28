@@ -108,7 +108,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
     h1 {
         padding: 50px 0 0 5%;
-        color:rgb(15, 14, 14);
+        color:rgb(83, 29, 233);
         font-size: 3.5vw;
         font-family: 'Noto Sans JP', sans-serif;
         }
@@ -130,6 +130,10 @@ font-family: 'Noto Sans JP', sans-serif;
     margin-top: 100px;
     font-size: 2.5vw;
     font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .cad {
+    margin-top: 20px;
     }
 
 
@@ -233,7 +237,7 @@ font-family: 'Noto Sans JP', sans-serif;
 
     h1 {
         margin: 100px 0 0 5%;
-        color:rgb(15, 14, 14);
+        color:rgb(35, 21, 223);
         font-size: 2.5vw;
         font-family: 'Noto Sans JP', sans-serif;
         }
@@ -256,6 +260,10 @@ font-family: 'Noto Sans JP', sans-serif;
     margin-top: 200px;
     font-size: 2vw;
     font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .cad {
+    margin-top: 20px;
     }
 
 
